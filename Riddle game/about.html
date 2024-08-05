@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Riddle Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    /* styles.css */
+
+/* About Us Page */
+
+.about-hero {
+    background: linear-gradient(135deg, #61dafb, #f9a825);
+    padding: 80px 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.about-hero .hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.about-hero .hero-content p {
+    font-size: 1.25rem;
+    line-height: 1.6;
+}
+
+.about-story {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.about-story h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.about-story p {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-creator {
+    padding: 60px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.about-creator h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.creator-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.creator-profile img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.creator-info {
+    max-width: 800px;
+}
+
+.creator-info h3 {
+    font-size: 1.75rem;
+    margin-bottom: 10px;
+}
+
+.creator-info p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Consistent Footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #61dafb;
+}
+
+.footer-links {
+    margin-bottom: 20px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-links li {
+    display: inline;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #f9a825;
+}
+
+.footer-social {
+    margin-bottom: 20px;
+}
+
+.social-icon {
+    font-size: 1.5rem;
+    color: #fff;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #f9a825;
+}
+
+.footer-credits {
+    font-size: 0.875rem;
+    color: #ccc;
+}
+
+.footer-credits p {
+    margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+    .team-member {
+        width: calc(50% - 40px);
+    }
+
+    .footer-links ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links li {
+        margin-bottom: 10px;
+    }
+
+    .social-icon {
+        font-size: 1.25rem;
+        margin: 0 5px;
+    }
+}
+
+</style>
+<body>
+    <header>
+        <div class="logo">
+            <a href="#how-it-works">RiddleGame</a>
+        </div>
+        <nav class="nav-desktop">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="signup.html">Play Now</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="leaderboard.html">Leaderboard</a></li>
+               
+            </ul>
+        </nav>
+        <nav class="nav-mobile">
+            <button class="nav-toggle">☰</button>
+            <ul class="nav-sidebar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="signup.html">Play Now</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="leaderboard.html">Leaderboard</a></li>
+               
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <a href="signup.html" class="btn-signup">Sign Up</a>
+     
+        </div>
+    </header>
+    
+    <section class="about-hero">
+        <div class="hero-content">
+            <h1>About Us</h1>
+            <p>Learn about the creator behind Riddle Game and the inspiration that brought this engaging riddle challenge to life.</p>
+        </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <section class="about-story">
+        <div class="story-content">
+            <h2>Our Story</h2>
+            <p>Riddle Game was created by Uwais Halil with a singular vision: to challenge and entertain players with a variety of intriguing riddles. The game was developed out of a deep passion for puzzles and a desire to provide a captivating experience for puzzle enthusiasts around the world.</p>
+            <p>Uwais Halil worked tirelessly to design and develop every aspect of the game, ensuring it is both challenging and rewarding. This project represents a culmination of his love for riddles and his commitment to creating a game that offers both fun and intellectual stimulation.</p>
+        </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <section class="about-creator">
+        <h2>Meet the Creator</h2>
+        <div class="creator-profile">
+            <img src="creator image/IMG-20240527-WA0085 (2).jpg" alt="Uwais Halil">
+            <div class="creator-info">
+                <h3>Uwais Halil</h3>
+                <p>Creator & Developer</p>
+                <p>Uwais Halil is the mastermind behind Riddle Game. With extensive experience in game development and a passion for puzzles, Uwais designed and built every aspect of the game. His goal was to create an engaging and challenging riddle experience for players of all skill levels.</p>
+            </div>
+        </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h1>Riddle Game</h1>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#testimonial-text">Testimonials</a></li>
+                    <li><a href="signup.html">Play Now</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <a href="#" class="social-icon">🐦</a>
+                <a href="#" class="social-icon">📘</a>
+                <a href="#" class="social-icon">📸</a>
+            </div>
+            <div class="footer-credits">
+                <p>Inspired by <strong>Uwais Halil</strong></p>
+                <p>&copy; 2024 Riddle Game. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

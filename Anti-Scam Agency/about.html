@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Scam Safe</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<style>
+
+
+
+
+
+.about-us h1 {
+    font-size: 2.2rem;
+    margin: 0; /* Remove default margin to ensure it spans full width */
+    color:  #61dafb; /* Set text color to white for better contrast */
+    position: relative;
+    display: block; /* Make sure it spans full width */
+    padding: 1rem 2rem; /* Adjust padding as needed */
+background-image: url(hero/scam-6922102_1920.png) ;/* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Ensure image covers entire width */
+    border-radius: 0; /* No rounded corners to fit full width */
+    box-shadow: none; /* No shadow for full width background */
+    overflow: hidden; /* Ensures the background image does not overflow */
+    width: 100vw; /* Full viewport width */
+    left: 50%;
+    margin-left: -50vw; /* Center it based on viewport width */
+    position: relative;
+    height: 55vh;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+.about-us h1::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #61dafb; /* Underline color */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.about-text {
+ 
+    margin: 0 auto 2rem auto;
+    text-align: center;
+}
+
+.about-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.about-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    animation: bounceIn 1s 0.5s forwards; /* Bounce effect for the icons */
+}
+
+.icon {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 1.5rem;
+}
+
+.icon i {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 1rem;
+}
+
+.icon h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.icon p {
+    font-size: 0.875rem;
+    line-height: 1.4;
+}
+
+.icon:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Keyframe Animations */
+@keyframes bounceIn {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(20px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Footer */
+footer {
+    background: #282c34;
+    color: #fff;
+    padding: 2rem 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 2rem;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    width: 30%;
+    margin-bottom: 1rem;
+}
+
+.footer-column h4 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.footer-column p, .footer-column ul {
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-column ul li a {
+    color: #61dafb;
+    text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-icons a {
+    color: #61dafb;
+    margin: 0 0.5rem;
+    font-size: 1.25rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #007bff;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.footer-bottom p {
+    font-size: 0.875rem;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .about-us h1 {
+        font-size: 2rem;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+    }
+
+    .icon {
+        max-width: 100%;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-column {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}
+
+
+
+</style>
+<body>
+ <!-- Header -->
+ <header>
+    <div class="container">
+        <!-- Logo -->
+        <div class="logo">
+            <a href="index.html">ScamSafe</a>
+        </div>
+
+        <!-- Navigation Menu (Desktop) -->
+        <nav class="nav-desktop">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="alert.html">Scam Alerts</a></li>
+                <li><a href="report.html">Report a Scam</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="nav-toggle" id="nav-toggle">
+            ☰
+        </button>
+    </div>
+
+    <!-- Mobile Navigation Sidebar -->
+    <nav class="nav-sidebar" id="nav-sidebar">
+        <button class="nav-close" id="nav-close">&times;</button>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="alert.html">Scam Alerts</a></li>
+            <li><a href="report.html">Report a Scam</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+</header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="about-us">
+            <h1>About Us</h1>
+            <div class="container">
+               
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>
+                            Welcome to Scam Safe! Our mission is to safeguard your digital world by providing comprehensive solutions to detect and prevent online scams and fraud. In today's rapidly evolving digital landscape, we are committed to staying at the forefront of technology and threat intelligence to ensure your online safety.
+                        </p>
+                        <p>
+                            Our team is composed of experts in cybersecurity, fraud prevention, and digital safety. We blend innovative technology with industry best practices to offer a range of services designed to protect you from scams and fraudulent activities. Whether you're an individual seeking to enhance your online security or a business looking for robust protection, Scam Safe is your trusted partner.
+                        </p>
+                        <p>
+                            Join us in our mission to create a safer online environment. Together, we can outsmart fraudsters and keep your digital presence secure.
+                        </p>
+                    </div>
+                    <div class="about-icons">
+                        <div class="icon">
+                            <i class="fas fa-shield-alt"></i>
+                            <h3>Advanced Protection</h3>
+                            <p>We utilize cutting-edge technology to offer the best protection against scams and cyber threats.</p>
+                        </div>
+                        <div class="icon">
+                            <i class="fas fa-lightbulb"></i>
+                            <h3>Expert Insight</h3>
+                            <p>Our team provides valuable insights and advice to help you navigate the digital landscape safely.</p>
+                        </div>
+                        <div class="icon">
+                            <i class="fas fa-headset"></i>
+                            <h3>24/7 Support</h3>
+                            <p>Our dedicated support team is available around the clock to assist with any concerns or issues.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>Contact Us</h4>
+                <p>
+                    Address: 123 Safe Street, Security City, SC 12345<br>
+                    Phone: (123) 456-7890<br>
+                    Email: <a href="mailto:info@scamsafe.com">info@scamsafe.com</a>
+                </p>
+            </div>
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Scam Safe. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+<script src="scripts.js" defer></script>
+</body>
+</html>

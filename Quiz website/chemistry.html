@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chemistry Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Quiz Page Styles */
+        .quiz-page {
+            padding: 60px 20px;
+            background-color: #f4f4f4;
+            min-height: 80vh;
+            text-align: center;
+        }
+
+        .quiz-page h1 {
+            font-size: 2.8em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .quiz-page p {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            color: #666;
+        }
+
+        .quiz-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .quiz-question {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            padding: 20px;
+            margin-bottom: 20px;
+            display: block;
+            width: 100%;
+            text-align: left;
+        }
+
+        .quiz-question h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .quiz-question label {
+            display: block;
+            margin: 10px 0;
+            font-size: 1.1em;
+            color: #666;
+            cursor: pointer;
+            line-height: 1.5;
+        }
+
+        .quiz-question input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .cta-button {
+            display: block;
+            margin: 40px auto 0;
+            background-color: #ffcc00;
+            color: #333;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 150px;
+        }
+
+        .cta-button:hover {
+            background-color: #ff9900;
+            transform: scale(1.05);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1024px) {
+            .quiz-page h1 {
+                font-size: 2.5em;
+            }
+
+            .quiz-page p {
+                font-size: 1.1em;
+            }
+
+            .cta-button {
+                font-size: 1.1em;
+                padding: 12px 25px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .quiz-page {
+                padding: 40px 10px;
+            }
+
+            .quiz-page h1 {
+                font-size: 2em;
+            }
+
+            .quiz-page p {
+                font-size: 1em;
+                margin-bottom: 30px;
+            }
+
+            .quiz-container {
+                padding: 10px;
+            }
+
+            .quiz-question h3 {
+                font-size: 1.3em;
+            }
+
+            .quiz-question label {
+                font-size: 1em;
+            }
+
+            .cta-button {
+                font-size: 1em;
+                padding: 10px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .quiz-page h1 {
+                font-size: 1.8em;
+            }
+
+            .quiz-page p {
+                font-size: 0.9em;
+                margin-bottom: 20px;
+            }
+
+            .quiz-question {
+                padding: 15px;
+            }
+
+            .quiz-question h3 {
+                font-size: 1.2em;
+            }
+
+            .quiz-question label {
+                font-size: 0.9em;
+            }
+
+            .cta-button {
+                font-size: 0.9em;
+                padding: 8px 15px;
+            }
+        }
+
+        /* Result Modal Styles */
+        .result-modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #fff;
+            border: 2px solid #333;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        .result-modal h2 {
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            color: #333;
+        }
+
+        .result-modal p {
+            font-size: 1.2em;
+            color: #666;
+        }
+
+        .result-modal button {
+            background: #ffcc00;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: #333;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .result-modal button:hover {
+            background-color: #ff9900;
+        }
+
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">Brain-Storm</a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#quizzes">Quizzes</a></li>
+                    <li><a href="#about">About Us</a></li>
+                </ul>
+            </nav>
+            <button class="nav-toggle" aria-label="Open Navigation Menu">
+                <span class="hamburger">☰</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar-nav">
+        <button class="close-btn" aria-label="Close Navigation Menu">&times;</button>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#quizzes">Quizzes</a></li>
+            <li><a href="#about">About Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <section class="quiz-page">
+        <h1>Chemistry Quiz</h1>
+        <p>Test your knowledge about chemistry with these questions.</p>
+
+        <div class="quiz-container">
+            <div class="quiz-question">
+                <h3>1. What is the chemical symbol for water?</h3>
+                <label><input type="radio" name="q1" value="a"> HO</label>
+                <label><input type="radio" name="q1" value="b" data-correct="true"> H<sub>2</sub>O</label>
+                <label><input type="radio" name="q1" value="c"> H<sub>2</sub>O<sub>2</sub></label>
+                <label><input type="radio" name="q1" value="d"> O<sub>2</sub>H</label>
+            </div>
+            <div class="quiz-question">
+                <h3>2. What is the periodic table symbol for gold?</h3>
+                <label><input type="radio" name="q2" value="a" data-correct="true"> Au</label>
+                <label><input type="radio" name="q2" value="b"> Ag</label>
+                <label><input type="radio" name="q2" value="c"> Pb</label>
+                <label><input type="radio" name="q2" value="d"> Fe</label>
+            </div>
+            <div class="quiz-question">
+                <h3>3. What is the pH level of pure water?</h3>
+                <label><input type="radio" name="q3" value="a"> 0</label>
+                <label><input type="radio" name="q3" value="b" data-correct="true"> 7</label>
+                <label><input type="radio" name="q3" value="c"> 14</label>
+                <label><input type="radio" name="q3" value="d"> 3</label>
+            </div>
+            <div class="quiz-question">
+                <h3>4. What is the main gas found in the air we breathe?</h3>
+                <label><input type="radio" name="q4" value="a"> Oxygen</label>
+                <label><input type="radio" name="q4" value="b" data-correct="true"> Nitrogen</label>
+                <label><input type="radio" name="q4" value="c"> Carbon Dioxide</label>
+                <label><input type="radio" name="q4" value="d"> Hydrogen</label>
+            </div>
+            <div class="quiz-question">
+                <h3>5. What is the process of converting a liquid into a gas called?</h3>
+                <label><input type="radio" name="q5" value="a"> Condensation</label>
+                <label><input type="radio" name="q5" value="b" data-correct="true"> Evaporation</label>
+                <label><input type="radio" name="q5" value="c"> Sublimation</label>
+                <label><input type="radio" name="q5" value="d"> Precipitation</label>
+            </div>
+            <div class="quiz-question">
+                <h3>6. What element does 'O' represent on the periodic table?</h3>
+                <label><input type="radio" name="q6" value="a"> Osmium</label>
+                <label><input type="radio" name="q6" value="b" data-correct="true"> Oxygen</label>
+                <label><input type="radio" name="q6" value="c"> Gold</label>
+                <label><input type="radio" name="q6" value="d"> Silver</label>
+            </div>
+        </div>
+
+        <a href="#" id="submit-quiz" class="cta-button">Submit Quiz</a>
+    </section>
+
+    <!-- Result Modal -->
+    <div class="modal-overlay" id="modal-overlay"></div>
+    <div class="result-modal" id="result-modal">
+        <h2>Quiz Result</h2>
+        <p id="result-text">You scored 0 out of 6</p>
+        <button id="close-modal">Close</button>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <!-- Social Media Links -->
+            <div class="social-media">
+                <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="quick-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#quizzes">Quizzes</a></li>
+                    <li><a href="#about">About Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <h4>Contact Us</h4>
+                <form action="submit_form.php" method="POST">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+
+            <!-- Copyright -->
+            <div class="copyright">
+                <p>&copy; 2024 Interactive Science Quizzes. All rights reserved.</p>
+            </div>
+        </div>
+
+        <!-- Back to Top Button -->
+        <a href="#" class="back-to-top" aria-label="Back to Top">
+            ↑
+        </a>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

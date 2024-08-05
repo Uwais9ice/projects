@@ -1,0 +1,862 @@
+/* styles.css */
+
+/* Basic reset and font setup */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: black;
+    color: #fff;
+}
+
+.logo-text {
+    font-family: 'Raleway', sans-serif; /* Slanty font */
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #e94e77;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.logo-text:hover {
+    color: #d73a65;
+    transform: skewX(-10deg); /* Adds a slanty effect on hover */
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    position: relative;
+}
+
+.main-nav ul li {
+    margin: 0 15px;
+}
+
+.main-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+}
+
+/* Hamburger Icon styles */
+.hamburger-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Full-Screen Menu styles */
+/* styles.css */
+
+/* Full-Screen Menu styles */
+.full-screen-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Ensure full-screen menu has relative positioning */
+.full-screen-menu nav {
+    position: relative;
+}
+
+.full-screen-menu nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+.full-screen-menu nav ul li {
+    margin: 20px 0;
+    position: relative;
+}
+
+.full-screen-menu nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    position: relative;
+}
+
+/* Hover Image styles */
+.full-screen-menu .hover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 68%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    z-index: -1; /* Ensure it doesn't cover navigation links */
+}
+
+/* Show the full-screen menu when active */
+.full-screen-menu.show {
+    transform: translateY(0);
+}
+
+/* Close Icon styles */
+.full-screen-menu .close-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 36px;
+    cursor: pointer;
+}
+
+
+/* Media Queries for responsive design */
+@media (max-width: 768px) {
+    .main-nav {
+        display: none;
+    }
+
+    .hamburger-icon {
+        display: block;
+    }
+}
+
+/* styles.css */
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Place behind content */
+}
+
+.video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 80%;
+}
+
+.hero-title {
+    font-size: 4rem;
+    margin: 0;
+    animation: fadeIn 2s ease-out;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    animation: fadeIn 3s ease-out;
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.25rem;
+    color: #fff;
+    background-color: #e94e77;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: fadeIn 4s ease-out;
+}
+
+.hero-button:hover {
+    background-color: #d43f6c;
+    transform: scale(1.05);
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-nav {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .full-screen-menu .hover-image {
+        width: 100%;
+        height: auto;
+    }
+}
+/* Featured Cars Section Styling */
+.featured-cars {
+    padding: 50px 20px;
+    background: #fff;
+    color: #333;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+/* Car Container */
+.car-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Car Card */
+.car-card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+.car-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.car-info {
+    padding: 20px;
+}
+
+.car-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.car-description {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Hover Effects */
+.car-card:hover {
+    transform: translateX(0);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.car-card:hover .car-image img {
+    filter: brightness(70%);
+    transform: scale(1.1);
+}
+
+.car-card:hover .car-info {
+    background: #e94e77;
+    color: #fff;
+}
+
+/* Flying In Animation */
+@keyframes flyInFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.featured-cars.show .car-card {
+    animation: flyInFromRight 1s ease-out forwards;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .car-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .car-card {
+        width: 80%;
+    }
+}
+
+/* About Us Section Styling */
+.about-us {
+    padding: 80px 20px;
+    background: url('team/car-1281640.jpg') no-repeat center center/cover; /* Background image */
+    background-size: cover;
+    color: black; /* Text color for better contrast */
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    animation: bounceBackground 10s infinite alternate; /* Bouncing background animation */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background for text readability */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    animation: flyInFromLeft 1s ease-out; /* Animation for the container */
+}
+
+.section-title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+    color: #fff; /* White color for text on dark background */
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #e94e77;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.4s ease;
+}
+
+.section-title:hover::after {
+    width: 120px;
+}
+
+/* Description Styling */
+.description {
+    font-size: 1.25rem;
+    margin: 0 auto 40px;
+    line-height: 1.8;
+    color: #ddd; /* Light color for text */
+    max-width: 700px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.description:hover {
+    color: #e94e77;
+    transform: translateY(-5px);
+}
+
+/* Stylish Divider */
+.stylish-divider {
+    border: 0;
+    height: 4px;
+    background: linear-gradient(to right, #e94e77, #f9a825, #e94e77);
+    margin: 40px auto;
+    position: relative;
+    width: 80%;
+}
+
+/* Bounce Background Animation */
+@keyframes bounceBackground {
+    0% {
+        background-position: center center;
+    }
+    50% {
+        background-position: center 10px;
+    }
+    100% {
+        background-position: center center;
+    }
+}
+
+/* Fly-In Animation */
+@keyframes flyInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.about-us.show {
+    animation: flyInFromLeft 1s ease-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .description {
+        font-size: 1.125rem;
+    }
+}
+/* Services Section Styling */
+.services {
+    padding: 80px 20px;
+    background: #f4f4f4;
+    color: #333;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    animation: flyInFromLeft 1s ease-out;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+    color: black;
+    animation: flyInFromLeft 1s ease-out;
+    animation-delay: 0.2s; /* Slight delay for a staggered effect */
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #e94e77;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.4s ease;
+}
+
+.section-title:hover::after {
+    width: 120px;
+}
+
+/* Services List */
+.services-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    animation: flyInFromLeft 1s ease-out;
+    animation-delay: 0.4s; /* Slightly longer delay for a staggered effect */
+}
+
+.service-item {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 300px;
+    flex: 1 1 calc(33% - 60px);
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    animation: flyInFromLeft 1s ease-out;
+    animation-delay: 0.6s; /* Further delay for a staggered effect */
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Service Icon */
+.icon {
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-svg {
+    width: 80px;
+    height: 80px;
+    fill: none;
+    stroke-width: 2;
+    stroke: #e94e77;
+    transition: transform 0.3s ease, stroke 0.3s ease;
+}
+
+.service-item:hover .icon-svg {
+    transform: rotate(360deg);
+    stroke: #f9a825;
+}
+
+/* Service Title */
+.service-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #e94e77;
+}
+
+/* Service Description */
+.service-description {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .services-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-item {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+}
+
+/* Fly-In Animation from Left */
+@keyframes flyInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+/* Contact Section Styling */
+.contact {
+    padding: 80px 20px;
+    background: #fff;
+    color: black;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    animation: flyInFromLeft 1s ease-out;
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.contact-form {
+    max-width: 600px;
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input, .form-group textarea {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.submit-btn {
+    background-color: #e94e77;
+    color: #fff;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #d73a65;
+}
+
+.contact-info {
+    max-width: 600px;
+    width: 100%;
+    text-align: left;
+}
+
+.contact-info h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-info ul li {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-info i {
+    font-size: 1.2rem;
+    color: #e94e77;
+    transition: color 0.3s ease;
+}
+
+.contact-info i:hover {
+    color: #d73a65;
+}
+
+.contact-info a {
+    color: #e94e77;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Fly-In Animation from Left */
+@keyframes flyInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+/* Footer Styling */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.footer-links, .footer-social, .footer-newsletter {
+    max-width: 600px;
+    width: 100%;
+}
+
+.footer-links h3, .footer-social h3, .footer-newsletter h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-social ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icon {
+    color: #fff;
+    font-size: 1.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #e94e77;
+    transform: scale(1.2);
+}
+
+.footer-newsletter input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    width: 200px;
+}
+
+.subscribe-btn {
+    background-color: #e94e77;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.subscribe-btn:hover {
+    background-color: #d73a65;
+}
+
+.footer-bottom {
+    margin-top: 40px;
+    font-size: 0.9rem;
+}
+Main Content Styling */
+.privacy-policy {
+    padding: 20px;
+}
+
+.privacy-policy h1 {
+    font-size: 2.5rem;
+    color: #e94e77;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.privacy-policy section {
+    margin-bottom: 30px;
+}
+
+.privacy-policy h2 {
+    font-size: 1.8rem;
+    color: white;
+    border-bottom: 2px solid #e94e77;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.privacy-policy p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: white;
+}
+
+.privacy-policy ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.privacy-policy ul li {
+    margin-bottom: 10px;
+}
+/* Main Content Styling */
+.terms-of-service {
+    padding: 20px;
+}
+
+.terms-of-service h1 {
+    font-size: 2.5rem;
+    color: #e94e77;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.terms-of-service section {
+    margin-bottom: 30px;
+}
+
+.terms-of-service h2 {
+    font-size: 1.8rem;
+    color: white;
+    border-bottom: 2px solid #e94e77;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.terms-of-service p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color:white;
+}
+
+.terms-of-service ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.terms-of-service ul li {
+    margin-bottom: 10px;
+}

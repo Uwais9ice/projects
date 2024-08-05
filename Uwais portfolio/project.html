@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uwais Halil's Portfolio</title>   <meta name="description" content="Welcome to the portfolio of Uwais Halil, an expert email marketer. Discover my work, skills, and learn more about me.">
+ 
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favi con.jpg" type="image/x-icon">
+   
+</head>
+<style>
+
+
+
+.section {
+    padding: 50px 0;
+}
+
+.project-images {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.project-images img {
+    max-width: 100%; /* Adjust image size to fit container */
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-description {
+    margin-bottom: 30px;
+}
+
+.project-details ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.project-details ul li {
+    margin-bottom: 10px;
+}
+
+
+
+</style>
+<body>
+    <header>
+        <div class="container">
+            <h1>Portfolio</h1>
+            <nav class="nav-menu">
+                <div class="hamburger-menu">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="project-details" class="section">
+            <div class="container">
+                <h2>LIFESTYLE-SHI</h2>
+                <div class="project-images">
+                    <img src="images/img.jpeg.jpg" alt="Project Image">
+                    
+                    <!-- Add more images if needed -->
+                </div>
+                <div class="project-description">
+                    <h3>About the Project</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum.</p>
+                    <!-- Add more detailed description content -->
+                </div>
+                <div class="project-details">
+                    <h3>Project Details</h3>
+                    <ul>
+                        <li><strong>Date:</strong> January 2024</li>
+                        <li><strong>Client:</strong> ABC Company</li>
+                        <li><strong>Category:</strong> Web Design</li>
+                        <!-- Add more project details as needed -->
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <ul>
+                    <li><a href="https://web.facebook.com/profile.php?id=61561736158536"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://x.com/UwaisHalil3"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/haliluwais767/"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/uwais-halil-8143362a7/"><i class="fab fa-linkedin-in"></i></a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 Uwais Halil. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+
+</body>
+<script>
+    // JavaScript for hamburger menu toggle
+document.querySelector('.hamburger-menu').addEventListener('click', () => {
+    document.querySelector('.nav-links').classList.toggle('active');
+    document.querySelectorAll('.bar').forEach(bar => {
+        bar.classList.toggle('change');
+    });
+});
+
+</script>
+</html>

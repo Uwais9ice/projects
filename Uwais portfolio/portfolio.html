@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uwais Halil's Portfolio</title>
+    <meta name="description" content="Explore Uwais Halil's portfolio showcasing successful email marketing campaigns, projects, and client testimonials.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon.jpg" type="image/x-icon">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Portfolio</h1>
+            <nav class="nav-menu">
+                <div class="hamburger-menu">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+<style>
+
+
+.portfolio {
+    padding: 100px 0;
+    background-color: #f0f0f0;
+}
+
+.portfolio h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.portfolio h2::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color: #3498db;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: slideInBar 1s ease forwards;
+}
+
+.portfolio-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    flex: 1 1 calc(33.333% - 40px);
+    max-width: calc(33.333% - 40px);
+    min-width: 300px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.portfolio-item img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.1);
+}
+
+.portfolio-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 20px;
+    text-align: center;
+}
+
+.portfolio-item:hover .overlay {
+    opacity: 1;
+}
+
+.portfolio-item .overlay h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.portfolio-item .overlay p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.portfolio-item .overlay .btn {
+    display: inline-block;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.portfolio-item .overlay .btn:hover {
+    background-color: #2980b9;
+}
+
+
+@media (max-width: 768px) {
+    .portfolio-item {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+
+
+
+
+</style>
+    <section class="portfolio">
+        <div class="container">
+            <h2>My Portfolio</h2>
+            <div class="portfolio-grid">
+                <!-- Example Project 1 -->
+                <div class="portfolio-item">
+                    <img src="images/img.jpeg.jpg" alt="Project 1">
+                    <div class="overlay">
+                        <h3>Project Title 1</h3>
+                        <p>Short description of the project goes here.</p>
+                        <a href="project.html" class="btn">View Project</a>
+                    </div>
+                </div>
+                <!-- Example Project 2 -->
+                <div class="portfolio-item">
+                    <img src="images/img.jpeg.jpg" alt="Project 2">
+                    <div class="overlay">
+                        <h3>Project Title 2</h3>
+                        <p>Short description of the project goes here.</p>
+                        <a href="project.html" class="btn">View Project</a>
+                    </div>
+                </div>
+                <!-- Example Project 3 -->
+                <div class="portfolio-item">
+                    <img src="images/img.jpeg.jpg" alt="Project 3">
+                    <div class="overlay">
+                        <h3>Project Title 3</h3>
+                        <p>Short description of the project goes here.</p>
+                        <a href="project.html" class="btn">View Project</a>
+                    </div>
+                </div>
+                <!-- Add more projects as needed -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <ul>
+                    <li><a href="https://web.facebook.com/profile.php?id=61561736158536"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://x.com/UwaisHalil3"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/haliluwais767/"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/uwais-halil-8143362a7/"><i class="fab fa-linkedin-in"></i></a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 Uwais Halil. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+<script>
+    // JavaScript for hamburger menu toggle
+document.querySelector('.hamburger-menu').addEventListener('click', () => {
+    document.querySelector('.nav-links').classList.toggle('active');
+    document.querySelectorAll('.bar').forEach(bar => {
+        bar.classList.toggle('change');
+    });
+});
+
+</script>
+</html>

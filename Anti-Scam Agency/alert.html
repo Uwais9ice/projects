@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scam Alerts - Scam Safe</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<style>
+
+
+.scam-alerts {
+    background: #f5f5f5;
+    padding: 2rem 1rem;
+
+    position: relative;
+}
+
+/* Keyframe Animation for Bouncing */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+.scam-alerts h1 {
+    font-size: 2.5rem;
+    margin: 2rem auto;
+    color:#007bff;
+    position: relative;
+    display: inline-block;
+    padding: 1rem;
+    background-image: url(hero/fraud-7065116.png);
+    background-size: cover;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    animation: bounce 2s infinite;
+    height: 30vh;
+}
+
+/* Rest of the styles remain the same */
+.alert-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.alert-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 1rem;
+    width: calc(33% - 2rem);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    width: 100%;
+}
+
+.alert-card:hover {
+    transform: translateY(-5px);
+}
+
+.alert-header {
+    background: #007bff;
+    color: #fff;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.alert-header .icon {
+    font-size: 2rem;
+}
+
+.alert-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.alert-body {
+    padding: 2rem;
+    color: #333;
+}
+
+.alert-body p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Call-to-Action Button Styles */
+.cta-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color:red;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+.cta-button:active {
+    background-color: #004494;
+    transform: translateY(1px);
+}
+
+</style>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">ScamSafe</a>
+            </div>
+            <nav class="nav-desktop">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="alert.html">Scam Alerts</a></li>
+                    <li><a href="report.html">Report a Scam</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="nav-toggle" id="nav-toggle">
+                ☰
+            </button>
+        </div>
+        <nav class="nav-sidebar" id="nav-sidebar">
+            <button class="nav-close" id="nav-close">&times;</button>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="alert.html">Scam Alerts</a></li>
+                <li><a href="report.html">Report a Scam</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="overlay" id="overlay"></div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="scam-alerts">
+            <h1>Scam Alerts</h1>
+            <div class="container">
+                
+                <div class="alert-container">
+                    <div class="alert-card">
+                        <div class="alert-header">
+                            <div class="icon"><i class="fas fa-bug"></i></div>
+                            <h2>Phishing Email Scam</h2>
+                        </div>
+                        <div class="alert-body">
+                            <p>Be cautious of emails claiming to be from well-known organizations asking for personal information. Always verify the source before taking any action.</p>
+                        </div>
+                    </div>
+                    <div class="alert-card">
+                        <div class="alert-header">
+                            <div class="icon"><i class="fas fa-credit-card"></i></div>
+                            <h2>Credit Card Fraud</h2>
+                        </div>
+                        <div class="alert-body">
+                            <p>Watch out for unauthorized transactions on your credit card. Report any suspicious activity immediately to your bank.</p>
+                        </div>
+                    </div>
+                    <div class="alert-card">
+                        <div class="alert-header">
+                            <div class="icon"><i class="fas fa-lock"></i></div>
+                            <h2>Password Reset Scam</h2>
+                        </div>
+                        <div class="alert-body">
+                            <p>Be wary of unsolicited password reset requests. Always ensure you are on the official website before entering any sensitive information.</p>
+                        </div>
+                    </div>
+                    <div class="alert-card">
+                        <div class="alert-header">
+                            <div class="icon"><i class="fas fa-phone"></i></div>
+                            <h2>Phone Scams</h2>
+                        </div>
+                        <div class="alert-body">
+                            <p>Avoid providing personal information over the phone unless you are certain of the caller's identity. Hang up and call back through official channels if in doubt.</p>
+                        </div>
+                    </div>
+                    <div class="alert-card">
+                        <div class="alert-header">
+                            <div class="icon"><i class="fas fa-gift"></i></div>
+                            <h2>Prize Scams</h2>
+                        </div>
+                        <div class="alert-body">
+                            <p>Do not fall for schemes that promise large sums of money or valuable prizes in exchange for a small fee or personal information.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cta-container">
+                <a href="report.html" class="cta-button">Report a Scam</a>
+            </div>
+        </section>
+        
+    </main>
+   
+    
+
+   <!-- Footer Section -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-column">
+            <h4>Contact Us</h4>
+            <p>
+                Address: 123 Safe Street, Security City, SC 12345<br>
+                Phone: (123) 456-7890<br>
+                Email: <a href="mailto:info@scamsafe.com">info@scamsafe.com</a>
+            </p>
+        </div>
+        <div class="footer-column">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Scam Safe. All rights reserved.</p>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+    
+    <script src="scripts.js" defer></script>
+</body>
+</html>

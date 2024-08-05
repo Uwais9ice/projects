@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn More - Riddle Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        
+
+        .learn-more {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .learn-more h2 {
+            font-size: 2.5rem;
+            margin-bottom: 100px;
+            color: #333;
+            transition: color 0.3s ease;
+        }
+
+        .learn-more h2:hover {
+            color: #ff5722;
+        }
+
+        .learn-more p {
+            font-size: 1.125rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: #555;
+            transition: color 0.3s ease;
+        }
+
+        .learn-more p:hover {
+            color: #333;
+        }
+
+        .play-button {
+            background-color: #ff5722;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.125rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .play-button:hover {
+            background-color: #e64a19;
+            transform: scale(1.05);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .learn-more h2 {
+                font-size: 2rem;
+            }
+
+            .learn-more p {
+                font-size: 1rem;
+            }
+
+            .play-button {
+                font-size: 1rem;
+                padding: 10px 20px;
+            }
+        }
+        /* Advanced CSS Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.learn-more {
+    animation: fadeIn 1s ease-in;
+}
+
+.play-button {
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">RiddleGame</a>
+        </div>
+        <nav class="nav-desktop">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="signup.html">Play Now</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="leaderboard.html">Leaderboard</a></li>
+               
+            </ul>
+        </nav>
+        <nav class="nav-mobile">
+            <button class="nav-toggle">☰</button>
+            <ul class="nav-sidebar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="signup.html">Play Now</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="leaderboard.html">Leaderboard</a></li>
+               
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <a href="signup.html" class="btn-signup">Sign Up</a>
+     
+        </div>
+    </header>
+    
+
+    <section class="learn-more">
+        <h2>Learn More About Riddle Game</h2>
+        <p>
+            Discover the excitement and challenge of our riddle game. Solve puzzles, advance through levels, and compete for the highest scores. Our game offers a variety of riddles to test your skills, a timer to add urgency, and hints to help you along the way. Join our community of players and see if you can top the leaderboard!
+        </p>
+        <a href="signup.html" class="play-button">Play Game</a>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h1>Riddle Game</h1>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#testimonial-text">Testimonials</a></li>
+                    <li><a href="signup.html">Play Now</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <a href="#" class="social-icon">🐦</a>
+                <a href="#" class="social-icon">📘</a>
+                <a href="#" class="social-icon">📸</a>
+            </div>
+            <div class="footer-credits">
+                <p>Inspired by <strong>Uwais Halil</strong></p>
+                <p>&copy; 2024 Riddle Game. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="scripts.js"></script>
+</body>
+</html>

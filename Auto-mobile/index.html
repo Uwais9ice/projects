@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automobile Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add this in the <head> section of your HTML -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<!-- Google Font -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap">
+
+
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <a href="index.html" class="logo-text">Uwais-Auto-Mobile</a>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html" data-hover-img="images/home.jpg">Home</a></li>
+                <li><a href="#about" data-hover-img="images/about.jpg">About</a></li>
+                <li><a href="#cars" data-hover-img="images/cars.jpg">Cars</a></li>
+                <li><a href="#services" data-hover-img="images/services.jpg">Services</a></li>
+                <li><a href="#contact" data-hover-img="images/contact.jpg">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger-icon" onclick="toggleMenu()">
+            ☰
+        </div>
+    </header>
+
+    
+    <div class="full-screen-menu" id="fullScreenMenu">
+        <div class="close-icon" onclick="toggleMenu()">
+            &times;
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" data-hover-img="images/home.jpg">Home</a></li>
+                <li><a href="#about" data-hover-img="images/about.jpg">About</a></li>
+                <li><a href="#cars" data-hover-img="images/cars.jpg">Cars</a></li>
+                <li><a href="#services" data-hover-img="images/services.jpg">Services</a></li>
+                <li><a href="#contact" data-hover-img="images/contact.jpg">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hover-image" id="hoverImage"></div>
+    </div>
+
+    <section class="hero">
+        <div class="video-background">
+            <video autoplay muted loop playsinline>
+                <source src="video/158316-816359649.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">Welcome to Our Automobile World</h1>
+            <p class="hero-subtitle">Discover the best cars and services tailored for you.</p>
+            <a href="#featuredCars" target="_blank" class="hero-button">Explore Now</a>
+        </div>
+    </section>
+
+    <section class="featured-cars" id="featuredCars">
+        <h2 class="section-title">Featured Cars</h2>
+        <div class="car-container">
+            <div class="car-card">
+                <div class="car-image">
+                    <img src="cars/car-604019.jpg" alt="Car 1">
+                </div>
+                <div class="car-info">
+                    <h3 class="car-title">Luxury Sedan</h3>
+                    <p class="car-description">Experience the ultimate comfort and style with our luxury sedan. Perfect for any occasion.</p>
+                </div>
+            </div>
+            <div class="car-card">
+                <div class="car-image">
+                    <img src="cars/car-1376190.jpg" alt="Car 2">
+                </div>
+                <div class="car-info">
+                    <h3 class="car-title">Sporty Coupe</h3>
+                    <p class="car-description">Feel the thrill with our sporty coupe, designed for high performance and sleek design.</p>
+                </div>
+            </div>
+            <div class="car-card">
+                <div class="car-image">
+                    <img src="cars/car-1880381.jpg" alt="Car 3">
+                </div>
+                <div class="car-info">
+                    <h3 class="car-title">Family SUV</h3>
+                    <p class="car-description">Our family SUV offers spacious seating and advanced features for a comfortable ride.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr class="stylish-divider">
+    <section class="about-us" id="about">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
+            <div class="about-us-content">
+                <p class="description">
+                    We are a leading automobile company with a rich history of innovation and excellence. Our mission is to provide top-quality vehicles that blend performance, safety, and style. With a commitment to sustainability and customer satisfaction, we strive to drive the future of mobility.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-list">
+                <div class="service-item">
+                    <div class="icon">
+                        <!-- Example SVG for Service 1 -->
+                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-svg">
+                            <circle cx="12" cy="12" r="10" stroke="#e94e77" stroke-width="2"/>
+                            <path d="M12 6V12L16 14" stroke="#e94e77" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Service 1</h3>
+                    <p class="service-description">
+                        We offer exceptional service 1, ensuring high-quality performance and reliability.
+                    </p>
+                </div>
+                <div class="service-item">
+                    <div class="icon">
+                        <!-- Example SVG for Service 2 -->
+                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-svg">
+                            <rect x="4" y="4" width="16" height="16" stroke="#e94e77" stroke-width="2"/>
+                            <circle cx="12" cy="12" r="4" stroke="#e94e77" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Service 2</h3>
+                    <p class="service-description">
+                        Our service 2 includes comprehensive solutions tailored to your needs.
+                    </p>
+                </div>
+                <div class="service-item">
+                    <div class="icon">
+                        <!-- Example SVG for Service 3 -->
+                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-svg">
+                            <path d="M12 2L15 8L22 9L17 14L18 21L12 17L6 21L7 14L2 9L9 8L12 2Z" stroke="#e94e77" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Service 3</h3>
+                    <p class="service-description">
+                        Experience top-notch service 3 with our skilled professionals and advanced tools.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+<section class="contact" id="contact">
+    <div class="container">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="contact-content">
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> 1234 Car Street, Auto City, AC 12345</li>
+                    <li><i class="fas fa-phone-alt"></i> (123) 456-7890</li>
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:info@automobiles.com">info@automobiles.com</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <!-- Quick Links -->
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="policy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Service</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <!-- Social Media Icons -->
+        <div class="footer-social">
+            <h3>Follow Us</h3>
+            <ul>
+                <li><a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#" class="social-icon"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#" class="social-icon"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a></li>
+            </ul>
+        </div>
+        <!-- Newsletter Signup -->
+        <div class="footer-newsletter">
+            <h3>Subscribe to Our Newsletter</h3>
+            <form action="#" method="post">
+                <input type="email" placeholder="Your Email Address" required>
+                <button type="submit" class="subscribe-btn">Subscribe</button>
+            </form>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Uwais-Automobile Company. All rights reserved.</p>
+    </div>
+</footer>
+
+
+
+    
+    <script src="scripts.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Uwais Halil - Email Marketing Expert</title>
+    <meta name="description" content="Get to know Uwais Halil, an experienced email marketer. Discover my background, career achievements, and what drives my passion for email marketing.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon.jpg" type="image/x-icon">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Portfolio</h1>
+            <nav class="nav-menu">
+                <div class="hamburger-menu">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Hello! I'm Uwais Halil, am a graduate specialized in the field of Library and Information Technology. My journey in technology began with a fascination for crafting intuitive user interfaces and effective email marketing campaigns. Currently, I am conducting research on the adoption of renewable energy in academic libraries to enhance information service delivery.</p>
+                    <p>Outside of academia, I enjoy exploring nature, diving into sci-fi novels, and engaging with fellow tech enthusiasts. My skills in HTML, CSS, and AI development enable me to create responsive and visually appealing websites. I am passionate about leveraging technology to improve information services and exploring the intersections of AI utilization and risk management.</p>
+                    <p>Let's connect and explore how technology can transform the way we interact with information and services!</p>
+                </div>
+                
+                <div class="about-img">
+                    <img src="images/IMG-20240527-WA0085 (2).jpg" alt="Profile Picture">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="Sign up Form.html">Sign-Up</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <ul>
+                    <li><a href="https://web.facebook.com/profile.php?id=61561736158536"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://x.com/UwaisHalil3"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/haliluwais767/"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/uwais-halil-8143362a7/"><i class="fab fa-linkedin-in"></i></a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 Uwais Halil. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <style>
+   
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        body{
+            background-image: url(images/shooting-star-3601173_640.jpg);
+      
+        }
+
+        /* About Section Styles */
+        .about {
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            position: relative;
+            color: white;
+        }
+
+        .about h2::after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 3px;
+            background-color: #3498db;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: slideInBar 1s ease forwards;
+        }
+
+  
+
+        .about-content {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .about-text {
+            flex: 1;
+            text-align: left;
+            max-width: 600px;
+            animation: bounceText 1s ease;
+        }
+
+        .about-text p {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: grey;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-style: oblique;
+        }
+
+        @keyframes bounceText {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .about-img {
+            flex: 1;
+            text-align: center;
+        }
+
+        .about-img img {
+            max-width: 50%;
+            height: auto;
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 5px 0;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .footer-nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .footer-nav ul li {
+            margin: 0 15px;
+        }
+
+        .footer-nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-nav ul li a:hover {
+            color: #3498db;
+        }
+
+        .footer-social ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0 0;
+        }
+
+        .footer-social ul li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        .footer-social ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-social ul li a:hover {
+            color: #3498db;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            .about-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .about-text,
+            .about-img {
+                flex: none;
+                width: 100%;
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+</body>
+<script>
+    // JavaScript for hamburger menu toggle
+document.querySelector('.hamburger-menu').addEventListener('click', () => {
+    document.querySelector('.nav-links').classList.toggle('active');
+    document.querySelectorAll('.bar').forEach(bar => {
+        bar.classList.toggle('change');
+    });
+});
+
+</script>
+</html>

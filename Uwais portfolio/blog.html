@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uwais Halil's Blog</title>
+    <meta name="description" content="Read Uwais Halil's blog for insights, tips, and updates on email marketing trends, strategies, and best practices.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon.jpg" type="image/x-icon">
+</head>
+
+
+
+
+<style>
+
+
+
+.blog-posts {
+    margin-top: 20px;
+}
+
+.blog-post {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.blog-post .meta {
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.blog-post p {
+    color: #555;
+    line-height: 1.8;
+}
+
+.btn-read-more {
+    display: inline-block;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.btn-read-more:hover {
+    background-color: #258cd1;
+}
+.blog {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.blog::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color: #3498db;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: slideInBar 1s ease forwards;
+}
+
+
+
+</style>
+<body>
+    <header>
+        <div class="container">
+            <h1>Portfolio</h1>
+            <nav class="nav-menu">
+                <div class="hamburger-menu">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="blog-posts">
+            <div class="container">
+                <h2 class="blog">Blog</h2>
+                <article class="blog-post">
+                  
+                    <h2>How to Improve Email Marketing Strategies</h2>
+                    <p class="meta">Posted on <time datetime="2024-07-18">July 18, 2024</time> by Uwais Halil</p>
+                    <p>Improving email marketing strategies involves several key steps to ensure that your emails are engaging, targeted, and effective. Here are some strategies to enhance your email marketing efforts.....</p>
+                    <a href="blog post.html" class="btn-read-more">Read more</a>
+                </article>
+                <article class="blog-post">
+                    <h2>The Importance of Data Analytics in Email Campaigns</h2>
+                    <p class="meta">Posted on <time datetime="2024-07-15">July 15, 2024</time> by Uwais Halil</p>
+                    <p>By analyzing past email performance and subscriber behavior, you can segment your audience more effectively...</p>
+                    <a href="blog post 2.html" class="btn-read-more">Read more</a>
+                </article>
+                <!-- More articles can be added here -->
+            </div>
+        </section>
+    </main>
+
+
+    <footer>
+        <div class="container">
+            <div class="footer-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <ul>
+                    <li><a href="https://web.facebook.com/profile.php?id=61561736158536"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://x.com/UwaisHalil3"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/haliluwais767/"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/uwais-halil-8143362a7/"><i class="fab fa-linkedin-in"></i></a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 Uwais Halil. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    </body>
+    <script>
+        // JavaScript for hamburger menu toggle
+    document.querySelector('.hamburger-menu').addEventListener('click', () => {
+        document.querySelector('.nav-links').classList.toggle('active');
+        document.querySelectorAll('.bar').forEach(bar => {
+            bar.classList.toggle('change');
+        });
+    });
+    
+    </script>
+</html>

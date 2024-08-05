@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Uwais Halil</title>
+    <meta name="description" content="Get in touch with Uwais Halil. Fill out the contact form or use the provided contact information.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon.jpg" type="image/x-icon">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "YOUR_PUBLIC_KEY",
+      });
+   })();
+</script>
+    
+</head>
+<style>
+
+.contact {
+    background-color: #fff;
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: calc(100vh - 100px);
+    position: relative;
+    overflow: hidden;
+}
+
+.contact .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+}
+
+.contact-info,
+.contact-form {
+    flex: 1;
+    max-width: 500px;
+    margin: 0 20px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Contact Info */
+.contact-info {
+    margin-right: 40px;
+}
+
+.contact-info h2::after {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 3px;
+    background-color: #3498db;
+    bottom: 220px;
+    left: 20%;
+    transform: translateX(-50%);
+    animation: slideInBar 1s ease forwards;
+    
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #7f8c8d;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Contact Icon */
+.contact-icon {
+    display: inline-block;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.contact-icon img {
+    width: 200px; /* Fixed image size */
+    height: auto;
+    transition: transform 0.3s ease;
+    border-radius: 100%;
+}
+
+.contact-icon:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+/* Contact Form */
+.contact-form {
+    margin-left: 40px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 2s ease-in-out;
+}
+
+.contact-form label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-bottom: 16px;
+    padding: 12px;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+.contact-form button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Adjustments */
+@media only screen and (max-width: 768px) {
+    .contact {
+        padding: 40px 20px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-info,
+    .contact-form {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .contact-info {
+        margin-bottom: 30px;
+    }
+
+    .contact-icon img {
+        width: 150px; /* Adjust image size for smaller screens */
+    }
+}
+
+/* Very Small Screens */
+@media only screen and (max-width: 480px) {
+    .contact-info h2 {
+        font-size: 2rem;
+    }
+
+    .contact-info p {
+        font-size: 1rem;
+    }
+
+    .contact-icon img {
+        width: 120px; /* Further adjust image size */
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 0.9rem;
+    }
+
+    .contact-form button {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+}
+
+</style>
+<body>
+    <header>
+        <div class="container">
+            <h1>Contact</h1>
+            <nav class="nav-menu">
+                <div class="hamburger-menu">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact">
+            <div class="container">
+                <div class="contact-info">
+                    <h2>Get in Touch</h2>
+                    <p>Have any questions or just want to say hi? Feel free to drop me a message!</p>
+                    <a href="https://x.com/UwaisHalil3" class="contact-icon">
+                        <img src="images/getintouch.jpg" alt="Get in Touch">
+                    </a>
+                </div>
+                <div class="contact-form">
+                    <form id="contact-form">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                        
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                        
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <ul>
+                    <li><a href="https://web.facebook.com/profile.php?id=61561736158536"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://x.com/UwaisHalil3"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/haliluwais767/"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/uwais-halil-8143362a7/"><i class="fab fa-linkedin-in"></i></a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 Uwais Halil. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+  emailjs.init({
+    publicKey: "p0S8rWfkM0RhMj0Ad",
+  });
+})();
+
+
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+            
+            // Collect form data
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                message: document.getElementById('message').value
+            };
+
+            console.log('Form Data:', formData); // Debugging: Check form data
+
+            // Send the email using EmailJS
+            emailjs.send('service_6l324s9', 'template_206bxb5', formData) // Using your EmailJS service ID
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    alert('Your message has been sent successfully!');
+                }, function(error) {
+                    console.error('FAILED...', error); // More detailed error logging
+                    alert('Failed to send your message. Please check the console for more details.');
+                });
+        });
+    </script>
+  <script>
+    // JavaScript for hamburger menu toggle
+    document.querySelector('.hamburger-menu').addEventListener('click', () => {
+        document.querySelector('.nav-links').classList.toggle('active');
+        document.querySelectorAll('.bar').forEach(bar => {
+            bar.classList.toggle('change');
+        });
+    });
+</script>
+
+    
+    
+
+</body>
+</html>

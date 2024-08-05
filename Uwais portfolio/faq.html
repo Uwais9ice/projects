@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uwais Halil - FAQ</title>
+    <meta name="description" content="Find answers to frequently asked questions about email marketing and Uwais Halil's services. Get detailed information and support.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon.jpg" type="image/x-icon">
+</head>
+
+
+
+
+<style>
+/* FAQ Section */
+.faq {
+    padding: 90px 0;
+    text-align: center;
+    color: var(--text-color-light);
+   
+}
+
+.faq-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    width: 100%; /* Ensure full width */
+}
+/* Add this to your styles.css or inside the <style> tag */
+    .section-title {
+    position: relative;
+    display: inline-block;
+    font-size: 2em; /* Adjust font size as needed */
+    color: var(--text-color-dark);
+    font-weight: 700; /* Bold text */
+    padding-bottom: 0.5em; /* Space for the underline */
+}
+
+.section-title::after{
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color: #3498db;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: slideInBar 1s ease forwards;
+    
+}
+
+
+
+.accordion {
+    width: 100%;
+    max-width: 800px; /* Limit max-width to control overall width */
+    margin: 0 auto; /* Center the accordion */
+}
+
+.accordion-item {
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.accordion-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.accordion-header {
+    background-color: var(--secondary-color);
+    color: var(--text-color-light);
+    cursor: pointer;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    text-align: left;
+    font-size: 0.7em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: relative;
+}
+
+.accordion-header:hover {
+    background-color: var(--accent-color);
+    transform: scale(1.02); /* Slightly scale up on hover */
+}
+
+.accordion-body {
+    background-color: #f9f9f9;
+    display: block; /* Changed to block to handle transitions */
+    overflow: hidden; /* Hide content overflow */
+    padding: 0 15px; /* Remove initial padding */
+    font-size: 0.8em;
+    color: var(--text-color-dark);
+    max-height: 0; /* Initially hidden */
+    transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.accordion-body.active {
+    max-height: 500px; /* Adjust this value based on content size */
+    padding: 15px;
+}
+
+</style>
+<body>
+    <header>
+        <div class="container">
+            <h1>Portfolio</h1>
+            <nav class="nav-menu">
+                <div class="hamburger-menu">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="faq">
+            <div class="container">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <div class="faq-content">
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <div class="accordion-header">
+                                <h3>What is email marketing?</h3>
+                                <span class="accordion-icon"><i class="fas fa-plus"></i></span>
+                            </div>
+                            <div class="accordion-body">
+                                <p>Email marketing is a form of direct marketing that uses electronic mail as a means of communicating commercial or fundraising messages to an audience. It can be used to enhance a business's relationship with current or previous customers, encourage customer loyalty, and drive sales.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div class="accordion-header">
+                                <h3>How often should I send marketing emails?</h3>
+                                <span class="accordion-icon"><i class="fas fa-plus"></i></span>
+                            </div>
+                            <div class="accordion-body">
+                                <p>The frequency of your marketing emails depends on your audience and goals. However, sending too many emails can lead to unsubscribes, while sending too few can result in lower engagement. A good rule of thumb is to send emails regularly but not excessively, such as once a week or bi-weekly.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div class="accordion-header">
+                                <h3>What are the benefits of a responsive email design?</h3>
+                                <span class="accordion-icon"><i class="fas fa-plus"></i></span>
+                            </div>
+                            <div class="accordion-body">
+                                <p>Responsive email design ensures that your emails look great on all devices, including desktops, tablets, and smartphones. This can lead to higher engagement rates, as recipients are more likely to interact with emails that are easy to read and navigate on any device.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div class="accordion-header">
+                                <h3>How can I measure the success of my email campaigns?</h3>
+                                <span class="accordion-icon"><i class="fas fa-plus"></i></span>
+                            </div>
+                            <div class="accordion-body">
+                                <p>Tracking these metrics can help you understand how well your campaigns are performing and identify areas for improvement.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div class="accordion-header">
+                                <h3>What is the best way to grow my email subscriber list?</h3>
+                                <span class="accordion-icon"><i class="fas fa-plus"></i></span>
+                            </div>
+                            <div class="accordion-body">
+                                <p>Growing your email subscriber list can be achieved through various strategies such as offering valuable content, using social media, running contests or giveaways, and optimizing your website for conversions. It's important to ensure that you are attracting engaged subscribers who are interested in your content.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div class="accordion-header">
+                                <h3>How do I avoid my emails being marked as spam?</h3>
+                                <span class="accordion-icon"><i class="fas fa-plus"></i></span>
+                            </div>
+                            <div class="accordion-body">
+                                <p>To avoid your emails being marked as spam, make sure to follow best practices such as using a reputable email service provider, obtaining permission from recipients before sending emails, avoiding spammy language, and regularly cleaning your email list to remove inactive subscribers.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <ul>
+                    <li><a href="https://web.facebook.com/profile.php?id=61561736158536"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://x.com/UwaisHalil3"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/haliluwais767/"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/uwais-halil-8143362a7/"><i class="fab fa-linkedin-in"></i></a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 Uwais Halil. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.accordion-header').forEach(header => {
+        header.addEventListener('click', () => {
+            const body = header.nextElementSibling;
+            const icon = header.querySelector('.accordion-icon i');
+
+            if (body.classList.contains('active')) {
+                body.classList.remove('active');
+                body.style.maxHeight = null; // Collapse
+                icon.classList.toggle('fa-plus');
+                icon.classList.toggle('fa-minus');
+            } else {
+                // Close all open accordions
+                document.querySelectorAll('.accordion-body').forEach(openBody => {
+                    openBody.classList.remove('active');
+                    openBody.style.maxHeight = null; // Collapse
+                    openBody.previousElementSibling.querySelector('.accordion-icon i').classList.add('fa-plus');
+                    openBody.previousElementSibling.querySelector('.accordion-icon i').classList.remove('fa-minus');
+                });
+
+                // Open the clicked accordion
+                body.classList.add('active');
+                body.style.maxHeight = body.scrollHeight + 'px'; // Set max-height to the content's scrollHeight
+                icon.classList.toggle('fa-plus');
+                icon.classList.toggle('fa-minus');
+            }
+        });
+    });
+
+    // JavaScript for hamburger menu toggle
+    document.querySelector('.hamburger-menu').addEventListener('click', () => {
+        document.querySelector('.nav-links').classList.toggle('active');
+        document.querySelectorAll('.bar').forEach(bar => {
+            bar.classList.toggle('change');
+        });
+    });
+});
+
+    </script>
+</body>
+</html>

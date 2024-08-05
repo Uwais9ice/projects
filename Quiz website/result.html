@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Page Styles */
+        .submit-quiz-page {
+            padding: 60px 20px;
+            background-color: #f4f4f4;
+            min-height: 80vh;
+            text-align: center;
+        }
+
+        .submit-quiz-page h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .submit-quiz-page p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            color: #666;
+        }
+
+        .result-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .result-container h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .result-container p {
+            font-size: 1.2em;
+            color: #666;
+        }
+
+        .cta-button {
+            display: block;
+            margin: 30px auto;
+            background-color: #ffcc00;
+            color: #333;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            text-align: center;
+            width: 200px;
+        }
+
+        .cta-button:hover {
+            background-color: #ff9900;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">Logo</a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="quizzes.html">Quizzes</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html#contact-form">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="nav-toggle" aria-label="Open Navigation Menu">
+                <span class="hamburger">☰</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar-nav">
+        <button class="close-btn" aria-label="Close Navigation Menu">&times;</button>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="quizzes.html">Quizzes</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html#contact-form">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <section class="submit-quiz-page">
+        <h1>Quiz Results</h1>
+        <p>Thank you for completing the quiz! Here are your results:</p>
+
+        <div class="result-container">
+            <h2 id="score-heading">Your Score</h2>
+            <p id="score">Calculating...</p>
+        </div>
+
+        <a href="quizzes.html" class="cta-button">Take Another Quiz</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="social-media">
+                <a href="https://facebook.com" target="_blank" aria-label="Facebook">Facebook</a>
+                <a href="https://twitter.com" target="_blank" aria-label="Twitter">Twitter</a>
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram">Instagram</a>
+                <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+            </div>
+
+            <div class="quick-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="quizzes.html">Quizzes</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html#contact-form">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2024 Interactive Science Quizzes. All rights reserved.</p>
+            </div>
+        </div>
+
+        <a href="#" class="back-to-top" aria-label="Back to Top">↑</a>
+    </footer>
+
+    <script>
+        // Calculate and display the user's score
+        document.addEventListener('DOMContentLoaded', function() {
+            // Dummy data for demonstration
+            const correctAnswers = {
+                q1: 'b',
+                q2: 'd',
+                q3: 'b',
+                q4: 'b',
+                q5: 'b',
+                q6: 'a'
+            };
+
+            // Retrieve user answers from localStorage
+            const userAnswers = {
+                q1: localStorage.getItem('q1'),
+                q2: localStorage.getItem('q2'),
+                q3: localStorage.getItem('q3'),
+                q4: localStorage.getItem('q4'),
+                q5: localStorage.getItem('q5'),
+                q6: localStorage.getItem('q6')
+            };
+
+            // Calculate the score
+            let score = 0;
+            for (let key in correctAnswers) {
+                if (userAnswers[key] === correctAnswers[key]) {
+                    score++;
+                }
+            }
+
+            // Display the score
+            document.getElementById('score').textContent = `${score} / ${Object.keys(correctAnswers).length}`;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources - Scam Safe</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<style>
+    header {
+    margin: 0;
+    padding: 20px;
+}
+
+
+.resources h1 {
+    font-size: 2.5rem;
+    margin: 2rem auto;
+    color:#007bff;
+    position: relative;
+    display: inline-block;
+    padding: 1rem;
+    background-image: url(hero/phishing-6926470_1920.png);
+    background-size: cover;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    animation: bounce 2s infinite;
+    height: 55vh;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+/* Resource Cards */
+.resource-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.resource-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 1rem;
+    width: 50%;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+}
+
+.resource-header {
+    background: #007bff;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.resource-header .icon {
+    font-size: 2rem;
+}
+
+.resource-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.resource-body {
+    padding: 1rem;
+    color: #333;
+}
+
+.resource-body ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.resource-body ul li {
+    margin-bottom: 0.5rem;
+}
+
+.resource-body ul li a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.resource-body ul li a:hover {
+    text-decoration: underline;
+}
+
+      
+
+</style>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">ScamSafe</a>
+            </div>
+            <nav class="nav-desktop">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="alert.html">Scam Alerts</a></li>
+                    <li><a href="report.html">Report a Scam</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="nav-toggle" id="nav-toggle">
+                ☰
+            </button>
+        </div>
+        <nav class="nav-sidebar" id="nav-sidebar">
+            <button class="nav-close" id="nav-close">&times;</button>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="alert.html">Scam Alerts</a></li>
+                <li><a href="report.html">Report a Scam</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="overlay" id="overlay"></div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="resources">
+            <h1>Resources</h1>
+            <div class="resource-container">
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <i class="fas fa-book"></i>
+                        <h2>Guides</h2>
+                    </div>
+                    <div class="resource-body">
+                        <ul>
+                            <li><a href="https://www.fbi.gov/scams-and-safety/common-scams-and-crimes/phishing" target="_blank">How to Identify Phishing Emails (FBI)</a></li>
+                            <li><a href="https://www.consumer.ftc.gov/articles/how-keep-your-data-safe" target="_blank">Steps to Secure Your Online Accounts (FTC)</a></li>
+                            <li><a href="https://www.identitytheft.gov/learn-about-identity-theft" target="_blank">What to Do if You’re a Victim of Fraud (IdentityTheft.gov)</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <i class="fas fa-tools"></i>
+                        <h2>Tools</h2>
+                    </div>
+                    <div class="resource-body">
+                        <ul>
+                            <li><a href="https://www.av-test.org/en/antivirus/home-windows/" target="_blank">Free Antivirus Software (AV-TEST)</a></li>
+                            <li><a href="https://www.pcmag.com/picks/the-best-password-managers" target="_blank">Password Manager Comparison (PCMag)</a></li>
+                            <li><a href="https://www.cnet.com/tech/services-and-software/best-secure-email-services/" target="_blank">Secure Email Services (CNET)</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <i class="fas fa-link"></i>
+                        <h2>Links</h2>
+                    </div>
+                    <div class="resource-body">
+                        <ul>
+                            <li><a href="https://www.consumer.ftc.gov/features/feature-0035-scam-alerts" target="_blank">Government Scam Prevention Resources (FTC)</a></li>
+                            <li><a href="https://www.bbb.org/scamtracker" target="_blank">Consumer Protection Agencies (BBB Scam Tracker)</a></li>
+                            <li><a href="https://www.ic3.gov/Default.aspx" target="_blank">Industry Best Practices (IC3)</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>Contact Us</h4>
+                <p>
+                    Address: 123 Safe Street, Security City, SC 12345<br>
+                    Phone: (123) 456-7890<br>
+                    Email: <a href="mailto:info@scamsafe.com">info@scamsafe.com</a>
+                </p>
+            </div>
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Scam Safe. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js" defer></script>
+</body>
+</html>
