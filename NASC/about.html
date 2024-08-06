@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who We Are | NASC</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<style>
+    html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Fancy Horizontal Rule Styling */
+.fancy-hr {
+    border: 0; /* Remove default border */
+    height: 1px; /* Height of the line */
+    background: linear-gradient(to right, #007bff, #fff, #007bff); /* Gradient effect */
+    margin: 40px 0; /* Margin for spacing */
+    position: relative; /* Position relative for pseudo-elements */
+}
+
+/* Fancy HR Before and After Pseudo-Elements */
+.fancy-hr::before,
+.fancy-hr::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 30px; /* Width of the decorative elements */
+    height: 1px; /* Height of the line */
+    background: #007bff; /* Color of the decorative elements */
+    transform: translateY(-50%); /* Center vertically */
+}
+
+.fancy-hr::before {
+    left: 0; /* Align to the left */
+}
+
+.fancy-hr::after {
+    right: 0; /* Align to the right */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .fancy-hr::before,
+    .fancy-hr::after {
+        width: 20px; /* Adjust width for smaller screens */
+    }
+}
+
+/* Top Section Styling */
+.top-section {
+    display: flex;
+    align-items: center;
+    padding: 0 20px; /* Padding on the left and right */
+    background: url('Hero/seeds-3962999.jpg') no-repeat center center; /* Background image */
+    background-size: cover; /* Cover the section */
+    border-bottom: 1px solid #ddd; /* Subtle border for separation */
+    height: 100px; /* Adjust height as needed */
+    position: relative;
+}
+
+/* Adjusted logo and text container to align towards the left */
+.logo-text-container {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 30px; /* Space from the left edge */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-left: 60px; /* Space between logo and text */
+}
+
+.logo {
+    max-width: 100px; /* Adjust logo size */
+    height: auto;
+}
+
+.top-text {
+    display: flex;
+    align-items: center;
+}
+
+.normal-text {
+    color: rgba(38, 122, 21, 0.973); /* Text color */
+    font-size: 1.1rem; /* Font size */
+    font-weight: bold; /* Font weight */
+    text-decoration: none; /* Ensure no underline */
+    margin-right: 20px; 
+    background-color: rgba(255, 255, 255, 0.911);
+    border-radius: 10px;
+}
+
+
+
+
+/* Header Styling */
+.header {
+    padding: 10px 0; /* Padding around the header */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for better separation */
+    background: rgba(7, 87, 14, 0.801);
+}
+
+.navbar-nav .nav-link {
+    color: #333; /* Navigation link color */
+    margin-left: 15px; /* Space between links */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #007bff; /* Color on hover */
+}
+
+.dropdown-menu {
+    background-color: #fff; /* Background color for dropdown */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for dropdown */
+}
+
+.dropdown-item {
+    color: #333; /* Dropdown item color */
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa; /* Light background on hover */
+    color: #007bff; /* Color on hover */
+}
+/* Adjustments for Mobile */
+@media (max-width: 767px) {
+    .logo {
+        max-height: 40px; /* Smaller logo for mobile screens */
+    }
+}
+
+/* Basic Dropdown Styling */
+.dropdown-menu {
+    display: none; /* Hide by default */
+    opacity: 0; /* Transparent */
+    visibility: hidden; /* Hidden */
+    transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease; /* Shorter transition duration */
+    transform: scaleY(0); /* Start scaled down */
+    transform-origin: top; /* Scale from top */
+}
+
+/* Show Dropdown on Click */
+.nav-item.show .dropdown-menu {
+    display: block; /* Show dropdown */
+    opacity: 1; /* Fully visible */
+    visibility: visible; /* Make visible */
+    transform: scaleY(1); /* Scale to normal size */
+}
+
+/* Optional: Styling for dropdown items */
+.dropdown-menu .dropdown-item {
+    padding: 10px 20px; /* Padding for spacing */
+    font-size: 1rem; /* Font size */
+    transition: background-color 0.2s ease; /* Smooth hover transition */
+}
+
+/* Hover effect for dropdown items */
+.dropdown-menu .dropdown-item:hover {
+    background-color: #f8f9fa; /* Light background on hover */
+}
+
+
+
+
+
+.navbar-brand .logo {
+    height: 50px; /* Adjusted logo size */
+}
+
+.navbar-nav .nav-link {
+    font-size: 14px; /* Consistent font size */
+    font-weight: 500; /* Slightly bold for emphasis */
+    position: relative;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for background and text color */
+    padding: 10px 15px; /* Add padding for better click area */
+    border-radius: 5px; /* Rounded corners for hover effect */
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: #007bff; /* Professional blue for hover */
+    color: #ffffff; /* White text on hover */
+}
+
+.navbar-nav .dropdown-menu {
+    border-radius: 0;
+    border: 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-nav .dropdown-item:hover {
+    background-color: #007bff; /* Professional blue for hover */
+    color: #0056b3; /* Matching text color for hover */
+}
+
+/* General Footer Styling */
+.footer {
+    background-color:green; /* Dark background for contrast */
+    color: white; /* Light text color */
+    padding: 40px 20px; /* Padding around the footer */
+    text-align: center; /* Center text and elements */
+}
+
+/* Footer Container */
+.footer-container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align items */
+    max-width: 1200px; /* Max width for alignment */
+    margin: auto; /* Center the container */
+}
+
+/* Footer Logo */
+.footer-logo img {
+    max-width: 150px; /* Size of the logo */
+    margin-bottom: 20px; /* Space below the logo */
+}
+
+/* Footer Content */
+.footer-content {
+    display: flex;
+    flex-wrap: wrap; /* Wrap items on smaller screens */
+    justify-content: space-between; /* Space between sections */
+    width: 100%; /* Full width */
+}
+
+/* Footer Sections */
+.footer-section {
+    flex: 1; /* Take equal space */
+    min-width: 200px; /* Minimum width for responsiveness */
+    margin: 0 15px; /* Margin between sections */
+}
+
+/* Footer Heading */
+.footer-heading {
+    font-size: 1.25rem; /* Larger font size for headings */
+    font-weight: 600; /* Bold font weight */
+    margin-bottom: 20px; /* Space below headings */
+    color: #fff; /* White text color */
+    border-bottom: 2px solid white; /* Blue underline */
+    padding-bottom: 10px; /* Padding for spacing */
+}
+
+/* Footer Links */
+.footer ul {
+    padding: 0; /* Remove default padding */
+    list-style: none; /* Remove bullet points */
+}
+
+.footer ul li {
+    margin-bottom: 10px; /* Space between list items */
+}
+
+.footer ul li a {
+    color: #f8f9fa; /* Light color for links */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth color transition */
+    font-size: 0.9rem; /* Slightly smaller font size */
+}
+
+.footer ul li a:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex; /* Flexbox for alignment */
+    gap: 15px; /* Space between icons */
+    justify-content: center; /* Center social icons */
+    margin: 20px 0; /* Margin above and below icons */
+}
+
+.social-icon {
+    color: #f8f9fa; /* Light color for icons */
+    font-size: 1.5rem; /* Size of social icons */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.social-icon:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+
+
+/* Newsletter Signup */
+.newsletter-signup {
+    display: flex; /* Flexbox for alignment */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align items */
+}
+
+.newsletter-signup input[type="email"] {
+    padding: 10px; /* Padding inside the input */
+    border: 1px solid #ddd; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    margin-bottom: 10px; /* Margin below the input */
+    width: 100%; /* Full width */
+    max-width: 300px; /* Maximum width */
+}
+
+.newsletter-signup button {
+    padding: 10px 20px; /* Padding inside the button */
+    background-color: #007bff; /* Button background color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    color: #fff; /* White text color */
+    font-size: 0.9rem; /* Slightly smaller font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.newsletter-signup button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+    margin-top: 30px; /* Space above the bottom section */
+    font-size: 0.875rem; /* Slightly smaller font size */
+    color: white; /* Light gray text color */
+    border-top: 1px solid white; /* Subtle top border */
+    padding-top: 20px; /* Padding above text */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Stack sections vertically */
+        align-items: center; /* Center align items */
+    }
+
+    .footer-section {
+        margin: 0; /* Remove margin between sections */
+        width: 100%; /* Full width for sections */
+        text-align: center; /* Center text alignment */
+        margin-bottom: 20px; /* Space between sections */
+    }
+
+    .footer-logo img {
+        max-width: 120px; /* Smaller logo on smaller screens */
+    }
+
+    .newsletter-signup {
+        align-items: center; /* Center items in newsletter signup */
+    }
+
+    .newsletter-signup input[type="email"] {
+        max-width: 100%; /* Full width input */
+    }
+
+    .social-icons {
+        justify-content: center; /* Center social icons */
+        margin: 10px 0; /* Adjust margin for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-heading {
+        font-size: 1rem; /* Smaller font size for headings */
+    }
+
+    .footer ul li a {
+        font-size: 0.8rem; /* Smaller font size for links */
+    }
+
+    .social-icon {
+        font-size: 1.25rem; /* Smaller social icon size */
+    }
+
+    .newsletter-signup button {
+        font-size: 0.8rem; /* Smaller font size for button */
+    }
+
+    .footer-bottom {
+        font-size: 0.75rem; /* Smaller font size for bottom section */
+    }
+}
+/* Scroll to Top Button */
+.scroll-to-top {
+    position: fixed; /* Fixed position to stay at bottom-right */
+    bottom: 20px; /* Distance from the bottom */
+    right: 20px; /* Distance from the right */
+    background-color: #007bff; /* Blue background color */
+    color: #fff; /* White icon color */
+    border: none; /* Remove default border */
+    border-radius: 50%; /* Circular shape */
+    width: 50px; /* Button size */
+    height: 50px; /* Button size */
+    display: flex; /* Flexbox for centering icon */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    font-size: 1.25rem; /* Icon size */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+    text-decoration: none; /* Remove underline */
+}
+
+.scroll-to-top:hover,
+.scroll-to-top:focus {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.1); /* Slightly larger on hover */
+}
+
+.scroll-to-top:active {
+    transform: scale(1); /* Normal size when clicked */
+}
+
+/* FontAwesome Icons (Ensure you have FontAwesome included) */
+.fas.fa-chevron-up {
+    margin: 0; /* No margin for the icon */
+}
+
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    background: #fff;
+    padding: 120px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-out;
+}
+h1, h2 {
+    text-align: center;
+    margin: 0;
+    padding: 10px 0;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards;
+    color: #004d00;
+}
+h1 {
+    animation-delay: 0.5s;
+}
+h2 {
+    animation-delay: 0.7s;
+}
+p {
+    text-align: justify;
+    margin: 15px 0;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards;
+}
+p:nth-of-type(1) {
+    animation-delay: 1s;
+}
+p:nth-of-type(2) {
+    animation-delay: 1.2s;
+}
+.section {
+    margin-bottom: 30px;
+}
+.bold {
+    font-weight: bold;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+    h1 {
+        font-size: 1.8em;
+    }
+    h2 {
+        font-size: 1.4em;
+    }
+    p {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+    }
+    h2 {
+        font-size: 1.2em;
+    }
+    p {
+        font-size: 0.9em;
+        margin: 8px 0;
+    }
+}
+</style>
+<body>
+<!-- Top Section -->
+<div class="top-section">
+    <div class="logo-text-container">
+        <div class="logo-container">
+            <img src="https://illajagroprocessing.com/wp-content/uploads/2020/01/NASC-630x572.png" alt="NASC Logo" class="logo">
+        </div>
+        <div class="top-text">
+            <span class="normal-text">National Agricultural Seeds Council</span>
+        </div>
+    </div>
+</div>
+
+<!-- Header Section -->
+<header class="header">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <!-- Home -->
+                <li class="nav-item">
+                    <a class="nav-link" href="home.html">Home</a>
+                </li>
+                
+                <!-- About Us Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="aboutUsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        About Us
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="aboutUsDropdown">
+                        <a class="dropdown-item" href="about.html">Who We Are</a>
+                        <a class="dropdown-item" href="#">What We Do</a>
+                        <a class="dropdown-item" href="#">Our Mandate</a>
+                        <a class="dropdown-item" href="#">Our Offices</a>
+                    </div>
+                </li>
+                
+                <!-- Seed Acts & Procurement Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="seedActsProcurementDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Seed Acts & Procurement
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="seedActsProcurementDropdown">
+                        <a class="dropdown-item" href="#">Seed Acts</a>
+                        <a class="dropdown-item" href="#">Procurement</a>
+                    </div>
+                </li>
+                
+                <!-- Council Policies Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="councilPoliciesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Council Policies
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="councilPoliciesDropdown">
+                        <a class="dropdown-item" href="#">Structures</a>
+                        <a class="dropdown-item" href="#">Department</a>
+                        <a class="dropdown-item" href="#">The Director General's Office</a>
+                        <a class="dropdown-item" href="#">Finance and Account Department</a>
+                        <a class="dropdown-item" href="#">Seed Industry Development (Seed Ind. Dev)</a>
+                        <a class="dropdown-item" href="#">Tech Support & Communication Services Department</a>
+                        <a class="dropdown-item" href="#">The Seed Coordination and Management Service Department</a>
+                        <a class="dropdown-item" href="#">Seed Certification Quality Control</a>
+                        <a class="dropdown-item" href="#">Crop Registration and Release Department</a>
+                        <a class="dropdown-item" href="#">Seed Information, Data Management & Capacity Building Department</a>
+                        <a class="dropdown-item" href="#">Seed Inspectorate Department</a>
+                        <a class="dropdown-item" href="#">Human Resource Department</a>
+                    </div>
+                </li>
+                
+                <!-- Media Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="mediaDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Media
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="mediaDropdown">
+                        <a class="dropdown-item" href="#">News & Events</a>
+                        <a class="dropdown-item" href="#">Photo Gallery</a>
+                        <a class="dropdown-item" href="#">Video Gallery</a>
+                        <a class="dropdown-item" href="#">Publications</a>
+                        <a class="dropdown-item" href="#">Annual Report</a>
+                        <a class="dropdown-item" href="#">Downloads</a>
+                    </div>
+                </li>
+                
+                <!-- Seed Producers & Mail Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="seedProducersMailDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Seed Producers & Mail
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="seedProducersMailDropdown">
+                        <a class="dropdown-item" href="#">Seed Producers</a>
+                        <a class="dropdown-item" href="#">Mail</a>
+                    </div>
+                </li>
+                
+                <!-- Services Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Services
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+                        <a class="dropdown-item" href="#">Application for Seed Certification Tags</a>
+                        <a class="dropdown-item" href="#">Seed Company Registration</a>
+                        <a class="dropdown-item" href="#">Seed Importation</a>
+                        <a class="dropdown-item" href="#">Seed Inspection</a>
+                        <a class="dropdown-item" href="#">Seed License Renewal</a>
+                        <a class="dropdown-item" href="#">Seed Testing</a>
+                        <a class="dropdown-item" href="#">Breeder & Foundation Seeds Indent/Sales</a>
+                        <a class="dropdown-item" href="#">Licence CBSP</a>
+                        <a class="dropdown-item" href="#">Seed Processing & Storage</a>
+                        <a class="dropdown-item" href="#">Seed Sample Testing Fee Schedule</a>
+                        <a class="dropdown-item" href="#">Payment</a>
+                        <a class="dropdown-item" href="#">Payment Procedure</a>
+                        <a class="dropdown-item" href="#">Cost of Available Services</a>
+                    </div>
+                </li>
+                
+                <!-- Apps Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="appsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Apps
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="appsDropdown">
+                        <a class="dropdown-item" href="#">E-Library</a>
+                        <a class="dropdown-item" href="#">Seed Tracker</a>
+                        <a class="dropdown-item" href="#">NEST</a>
+                        <a class="dropdown-item" href="#">E-Registry</a>
+                        <a class="dropdown-item" href="#">Seed Information Management Platform</a>
+                    </div>
+                </li>
+                
+                <!-- Contact Us -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact Us</a>
+                </li>
+            
+        </div>
+    </nav>
+</header>
+
+<div class="container">
+    <h1 class="center">Who we are</h1>
+    <hr class="fancy-hr">
+
+    <div class="section">
+        <p>The National Association of State Credit Unions (NASC) is a key organization dedicated to supporting and representing state-chartered credit unions across the United States. NASC is responsible for advocating on behalf of its members, providing essential resources and educational opportunities, and influencing public policy to promote a strong and effective credit union sector. The organization plays a crucial role in fostering a collaborative environment for state credit unions, ensuring they have the tools and support needed to thrive in a competitive financial landscape.</p>
+    </div>
+
+    <div class="section">
+        <h2 class="center">Our Mandate</h2>
+        <p>NASC is charged with the responsibility of advancing the interests of state-chartered credit unions through effective advocacy, education, and resource provision. Our mandate includes overseeing the development and implementation of policies that impact state credit unions, supporting members with valuable insights and training, and ensuring that best practices are adopted across the sector. NASC works diligently to address the evolving needs of credit unions, ensuring they remain competitive and capable of delivering exceptional service to their members.</p>
+    </div>
+
+    <div class="section">
+        <h2 class="center">Our Mission</h2>
+        <p>To enhance the success and growth of state-chartered credit unions by providing comprehensive advocacy, education, and resources, while promoting a collaborative and innovative environment that supports the financial well-being of our members and the communities they serve.</p>
+    </div>
+
+    <div class="section">
+        <h2 class="center">Our Vision</h2>
+        <p>To be the leading voice for state credit unions in the United States, driving innovation, influencing policy, and fostering a cooperative spirit that strengthens the credit union movement and contributes to the economic stability and prosperity of the communities we serve.</p>
+    </div>
+    <hr class="fancy-hr">
+</div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <a href="#"><img src="https://illajagroprocessing.com/wp-content/uploads/2020/01/NASC-630x572.png" alt="Company Logo"></a>
+            </div>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h2 class="footer-heading">About Us</h2>
+                    <p class="about-us">We are a leading company in our industry, committed to delivering high-quality products and services to our customers. Our mission is to provide exceptional value and service with a focus on innovation and excellence.</p>
+                </div>
+                <div class="footer-section">
+                    <h2 class="footer-heading">Quick Links</h2>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h2 class="footer-heading">Connect With Us</h2>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h2 class="footer-heading">Newsletter Signup</h2>
+                    <div class="newsletter-signup">
+                        <input type="email" placeholder="Your email address" aria-label="Email">
+                        <button type="submit">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Your Company. All rights reserved.</p>
+            </div>
+            <a href="home.html" class="scroll-to-top" aria-label="Scroll to Top">
+                <i class="fas fa-chevron-up"></i>
+            </a>
+        </div>
+    </footer>
+    
+    
+    
+    
+    
+    
+    
+    
+        <!-- Bootstrap JS, Popper.js, and jQuery -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script>
+           document.addEventListener('DOMContentLoaded', function() {
+        const serviceCards = document.querySelectorAll('.service-card');
+    
+        function handleScroll() {
+            const scrollPosition = window.scrollY + window.innerHeight;
+    
+            serviceCards.forEach(card => {
+                const cardTop = card.getBoundingClientRect().top + window.scrollY;
+    
+                if (scrollPosition > cardTop) {
+                    card.classList.add('visible');
+                }
+            });
+        }
+    
+        window.addEventListener('scroll', handleScroll);
+        handleScroll(); // Initial check in case cards are already in view
+    });
+    document.addEventListener("DOMContentLoaded", function() {
+        const scrollLinks = document.querySelectorAll('a[href^="#"]');
+    
+        scrollLinks.forEach(link => {
+            link.addEventListener("click", function(event) {
+                event.preventDefault();
+                const targetId = this.getAttribute("href");
+                const targetElement = document.querySelector(targetId);
+    
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: "smooth"
+                    });
+                }
+            });
+        });
+    });
+    document.addEventListener('DOMContentLoaded', function () {
+        var scrollToTopButton = document.querySelector('.scroll-to-top');
+    
+        // Show or hide the button based on scroll position
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 300) {
+                scrollToTopButton.style.opacity = '1';
+            } else {
+                scrollToTopButton.style.opacity = '0';
+            }
+        });
+    
+        // Smooth scroll to top
+        scrollToTopButton.addEventListener('click', function (event) {
+            event.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    });
+    
+        </script>
+    </body>
+    </html>
+    
