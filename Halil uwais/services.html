@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"> <!-- Import Google Font -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css"> <!-- Bootstrap Icons -->
+</head>
+<body>
+     
+    <header class="header">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="logo">
+                <a href="#" class="logo-link">
+                    <img src="Logo/logo.png.webp" alt="Logo" class="logo"> <!-- Add your logo path here -->
+                </a>
+            </div>
+            <nav class="navbar d-none d-lg-flex"> <!-- Hide on small screens -->
+                <ul class="nav">
+                  <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                  <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                  <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                  <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+                  <li class="nav-item"><a class="nav-link" href="Faq.html">Faq</a></li>
+                  <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                  <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+                  <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="d-lg-none"> <!-- Show on small screens only -->
+                <button class="navbar-toggler" type="button" id="sidebarToggle" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="bi bi-three-dots-vertical"></i> <!-- Three-dot icon -->
+                </button>
+            </div>
+            <button class="navbar-toggler d-none d-lg-block" type="button" id="sidebarToggle" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-three-dots-vertical"></i> <!-- Three-dot icon -->
+            </button>
+        </div>
+    </header>
+
+    <div id="sidebar" class="sidebar">
+        <button class="close-btn" id="closeSidebar">
+            <i class="bi bi-x"></i> <!-- Close icon -->
+        </button>
+        <ul class="nav flex-column">
+          <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="Faq.html">Faq</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        </ul>
+    </div>
+    <section class="about-hero">
+        <div class="container text-center">
+            <div class="circle"></div>
+            <h1 class="mt-4 fw-bold">My Services</h1> <!-- Increased font size and made it bold -->
+            <p class="breadcrumb-text">
+                <a href="index.html" class="text-orange">Home</a> &gt; 
+                <span class="text-orange">Services</span> <!-- Breadcrumb with link -->
+            </p>
+        </div>
+    </section>
+    
+    <section class="core-features-section">
+        <div class="container">
+          <div class="row">
+            <!-- Left Column: Core Features Section -->
+            <div class="col-lg-6">
+              <div class="text-center mb-5">
+                <h2>My Core Features</h2>
+                <p>
+                  Just like the Little Blind Text that evolves with every rewrite, my approach to digital marketing and front-end development is one of constant refinement and innovation. In a world where strategies and trends change rapidly, I focus on crafting solutions that not only keep up but also set new standards.
+                </p>
+              </div>
+      
+              <!-- Services Cards Section (Flex Layout) -->
+              <div class="d-flex flex-wrap justify-content-between">
+                <!-- Static color card -->
+                <div class="service-card static-card flex-item">
+                  <i class="fas fa-code"></i>
+                  <h5>Web Development</h5>
+                  <p>
+                    Crafting responsive and high-performance websites using the latest technologies.
+                  </p>
+                </div>
+      
+                <!-- Cards with hover effect -->
+                <div class="service-card hover-card flex-item">
+                  <i class="fas fa-chart-line"></i>
+                  <h5>Digital Marketing</h5>
+                  <p>
+                    Optimizing digital marketing strategies that drive business growth and engagement.
+                  </p>
+                </div>
+      
+                <div class="service-card hover-card flex-item">
+                  <i class="fas fa-envelope"></i>
+                  <h5>Email Marketing</h5>
+                  <p>
+                    Designing and implementing effective email campaigns for better conversions.
+                  </p>
+                </div>
+      
+                <div class="service-card hover-card flex-item">
+                  <i class="fas fa-bullhorn"></i>
+                  <h5>SEO Optimization</h5>
+                  <p>
+                    Boosting search engine visibility with tailored SEO strategies.
+                  </p>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Right Column: Journey Section -->
+            <div class="col-lg-6">
+              <div class="journey-section border-stylish">
+                <div class="text-center mb-5">
+                  <img src="resume image/uwais halil.jpeg" alt="My Journey" class="img-journey">
+                </div>
+      
+                <div class="text-left mt-4">
+                  <h3>Discover My Journey</h3>
+                  <p>
+                    Far beyond the ordinary, in the vast landscape of digital innovation, lies a story of constant evolution. Just like the ever-changing trends in the world of technology and marketing, my journey as a Front-End Developer, Digital Marketer, and Email Marketer has been one of adaptation and growth.
+                  </p>
+                  <p>
+                    Along the way, I encountered challenges and obstacles, each shaping my skills and refining my approach. From the dynamic fields of web development to the strategic world of digital marketing, every step has contributed to the unique solutions I now offer. What remains at the core is a commitment to precision, creativity, and delivering impactful results — no matter how many times the strategies evolve.
+                  </p>
+                  <button class="btn btn-primary">Get in Touch</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="Logo/logo.png.webp" alt="Your Logo" class="footer-logo-img">
+            </div>
+            <div class="footer-contact">
+                <p class="footer-email">haliluwais67@gmail.com</p>
+                <p class="footer-address">Abuja, Nigeria, Mararaba, Angwan Albarka.</p>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2024 All rights reserved | Uwais Halil</p>
+                <div class="footer-social">
+                    <span>Stay Connected</span>
+                    <a href="#" aria-label="Facebook" class="social-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" aria-label="Twitter" class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" aria-label="LinkedIn" class="social-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+            <a href="#top" class="back-to-top" aria-label="Back to top">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="chevron-icon">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 15l-3-3-3 3m6-6l-3-3-3 3" />
+                </svg>
+            </a>
+        </div>
+    </footer>
+    
+
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+</body>
+</html>

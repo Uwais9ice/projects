@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"> <!-- Import Google Font -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css"> <!-- Bootstrap Icons -->
+</head>
+<body>
+     
+    <header class="header">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="logo">
+                <a href="#" class="logo-link">
+                    <img src="Logo/logo.png.webp" alt="Logo" class="logo"> <!-- Add your logo path here -->
+                </a>
+            </div>
+            <nav class="navbar d-none d-lg-flex"> <!-- Hide on small screens -->
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Faq.html">Faq</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+                </ul>
+            </nav>
+            <div class="d-lg-none"> <!-- Show on small screens only -->
+                <button class="navbar-toggler" type="button" id="sidebarToggle" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="bi bi-three-dots-vertical"></i> <!-- Three-dot icon -->
+                </button>
+            </div>
+            <button class="navbar-toggler d-none d-lg-block" type="button" id="sidebarToggle" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-three-dots-vertical"></i> <!-- Three-dot icon -->
+            </button>
+        </div>
+    </header>
+
+    <div id="sidebar" class="sidebar">
+        <button class="close-btn" id="closeSidebar">
+            <i class="bi bi-x"></i> <!-- Close icon -->
+        </button>
+        <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link" href="Faq.html">Faq</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        </ul>
+    </div>
+    <section class="about-hero">
+        <div class="container text-center">
+            <div class="circle"></div>
+            <h1 class="mt-4 fw-bold">FAQ's</h1> <!-- Increased font size and made it bold -->
+            <p class="breadcrumb-text">
+                <a href="index.html" class="text-orange">Home</a> &gt; 
+                <span class="text-orange">FAQ's</span> <!-- Breadcrumb with link -->
+            </p>
+        </div>
+    </section>
+<!-- FAQ Section -->
+<section class="faq-container">
+    <div class="container">
+        <h2 class="faq-heading">Frequently Asked Questions</h2>
+        <div class="row">
+            <!-- FAQ Accordion -->
+            <div class="col-md-8">
+                <div id="faqAccordion" class="accordion">
+                    <div class="faq-card">
+                        <div class="faq-header" id="faqOne">
+                            <h5 class="faq-title">
+                                <button class="btn faq-button" data-toggle="collapse" data-target="#faqCollapseOne" aria-expanded="true" aria-controls="faqCollapseOne">
+                                    <span class="faq-plus">+</span> What is email marketing?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="faqCollapseOne" class="collapse show" aria-labelledby="faqOne" data-parent="#faqAccordion">
+                            <div class="faq-body">
+                                Email marketing is a digital marketing strategy that uses email to promote products or services, build relationships with customers, and increase brand awareness.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-card">
+                        <div class="faq-header" id="faqTwo">
+                            <h5 class="faq-title">
+                                <button class="btn faq-button collapsed" data-toggle="collapse" data-target="#faqCollapseTwo" aria-expanded="false" aria-controls="faqCollapseTwo">
+                                    <span class="faq-plus">+</span> How can digital marketing benefit my business?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="faqCollapseTwo" class="collapse" aria-labelledby="faqTwo" data-parent="#faqAccordion">
+                            <div class="faq-body">
+                                Digital marketing allows businesses to reach a larger audience, target specific demographics, and analyze marketing efforts in real-time, leading to improved ROI.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-card">
+                        <div class="faq-header" id="faqThree">
+                            <h5 class="faq-title">
+                                <button class="btn faq-button collapsed" data-toggle="collapse" data-target="#faqCollapseThree" aria-expanded="false" aria-controls="faqCollapseThree">
+                                    <span class="faq-plus">+</span> What are the best practices for email marketing?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="faqCollapseThree" class="collapse" aria-labelledby="faqThree" data-parent="#faqAccordion">
+                            <div class="faq-body">
+                                Best practices for email marketing include segmenting your audience, personalizing content, optimizing for mobile, and maintaining a clean subscriber list.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-card">
+                        <div class="faq-header" id="faqFour">
+                            <h5 class="faq-title">
+                                <button class="btn faq-button collapsed" data-toggle="collapse" data-target="#faqCollapseFour" aria-expanded="false" aria-controls="faqCollapseFour">
+                                    <span class="faq-plus">+</span> How do I measure the success of my digital marketing campaigns?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="faqCollapseFour" class="collapse" aria-labelledby="faqFour" data-parent="#faqAccordion">
+                            <div class="faq-body">
+                                Success can be measured through various KPIs, including website traffic, conversion rates, click-through rates, and return on investment (ROI).
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-card">
+                        <div class="faq-header" id="faqFive">
+                            <h5 class="faq-title">
+                                <button class="btn faq-button collapsed" data-toggle="collapse" data-target="#faqCollapseFive" aria-expanded="false" aria-controls="faqCollapseFive">
+                                    <span class="faq-plus">+</span> What is the role of SEO in digital marketing?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="faqCollapseFive" class="collapse" aria-labelledby="faqFive" data-parent="#faqAccordion">
+                            <div class="faq-body">
+                                SEO (Search Engine Optimization) is essential for improving organic search visibility, increasing website traffic, and enhancing user experience, ultimately driving conversions.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          <!-- Right Side -->
+<div class="col-md-6">
+    <form id="contactForm" onsubmit="sendMail(event)">
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+        </div>
+        <div class="mb-3">
+            <label for="message" class="form-label">Your Message</label>
+            <textarea class="form-control" id="message" rows="4" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-outline-orange">Send Message</button>
+    </form>
+</div>
+        </div>
+    </div>
+</section>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="Logo/logo.png.webp" alt="Your Logo" class="footer-logo-img">
+            </div>
+            <div class="footer-contact">
+                <p class="footer-email">haliluwais67@gmail.com</p>
+                <p class="footer-address">Abuja, Nigeria, Mararaba, Angwan Albarka.</p>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2024 All rights reserved | Uwais Halil</p>
+                <div class="footer-social">
+                    <span>Stay Connected</span>
+                    <a href="#" aria-label="Facebook" class="social-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" aria-label="Twitter" class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" aria-label="LinkedIn" class="social-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+            <a href="#top" class="back-to-top" aria-label="Back to top">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="chevron-icon">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 15l-3-3-3 3m6-6l-3-3-3 3" />
+                </svg>
+            </a>
+        </div>
+    </footer>
+    
+
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+        
+</body>
+</html>

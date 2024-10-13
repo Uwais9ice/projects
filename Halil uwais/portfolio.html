@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"> <!-- Bootstrap Icons -->
+    <title>Page Under Construction</title>
+    <style>
+        body {
+            background-color: #000; /* Bootstrap black background */
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .construction-container {
+            background: rgba(255, 255, 255, 0.1); /* Light semi-transparent background */
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            z-index: 1; /* Ensure it sits above the overlay */
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        .timer {
+            font-size: 2rem;
+            margin: 20px 0;
+        }
+        .btn {
+            background-color: #f11d66;
+            border: none;
+        }
+        .btn:hover {
+            background-color: #c81452;
+        }
+        .smoke {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none; /* Allow clicks to pass through */
+            opacity: 0; /* Start hidden */
+            background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent white */
+            transition: opacity 0.5s ease; /* Smooth transition */
+            z-index: 0; /* Place below the container */
+            backdrop-filter: blur(10px); /* Adds a blur effect */
+        }
+        body:hover .smoke {
+            opacity: 1; /* Show smoke on hover */
+        }
+        .animation-container {
+            position: relative;
+            width: 100px; /* Adjust size as necessary */
+            height: 100px; /* Adjust size as necessary */
+            margin: 0 auto; /* Center the animation */
+            animation: hammerSwing 0.5s infinite; /* Animation duration and infinite loop */
+        }
+        @keyframes hammerSwing {
+            0%, 100% {
+                transform: rotate(0deg);
+            }
+            50% {
+                transform: rotate(-30deg);
+            }
+        }
+        .worker {
+            font-size: 48px; /* Size of the construction worker icon */
+            position: absolute;
+            bottom: 20px; /* Position above the nail */
+            left: 20px; /* Adjust as necessary */
+            z-index: 2;
+        }
+        .hammer {
+            font-size: 24px; /* Size of the hammer icon */
+            position: absolute;
+            bottom: 60px; /* Position above the worker */
+            left: 50px; /* Center horizontally */
+            z-index: 1;
+        }
+        .nail {
+            font-size: 24px; /* Size of the nail icon */
+            position: absolute;
+            bottom: 10px; /* Position below the hammer */
+            left: 50px; /* Center horizontally */
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="smoke"></div> <!-- Smoke overlay -->
+    <div class="construction-container">
+        <h1>🚧 Page Still in Building Process 🚧</h1>
+        <div class="animation-container">
+            <i class="bi bi-person-fill worker"></i> <!-- Construction worker icon -->
+            <i class="bi bi-hammer hammer"></i> <!-- Hammer icon -->
+            <i class="bi bi-gear-fill nail"></i> <!-- Nail icon -->
+        </div>
+        <p>We are currently working on this page. Please check back later!</p>
+        <div class="timer" id="countdown"></div>
+        <a href="home.html" class="btn btn-lg">Go Back Home</a>
+    </div>
+    
+
+    <script>
+        // Set the countdown time (30 days in milliseconds)
+        const countdownTime = 30 * 24 * 60 * 60 * 1000; // 30 days in milliseconds
+        const endTime = new Date().getTime() + countdownTime;
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = endTime - now;
+
+            // Calculate days, hours, minutes, and seconds
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the result
+            document.getElementById("countdown").innerHTML = 
+                `Time Remaining: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+            // If the countdown is finished, display a message
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "The page is now ready!";
+            }
+        }
+
+        // Update the countdown every second
+        const x = setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>

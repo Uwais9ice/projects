@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"> <!-- Import Google Font -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "p0S8rWfkM0RhMj0Ad",
+      });
+   })();
+</script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css"> <!-- Bootstrap Icons -->
+</head>
+<body>
+     
+    <header class="header">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="logo">
+                <a href="#" class="logo-link">
+                    <img src="Logo/logo.png.webp" alt="Logo" class="logo"> <!-- Add your logo path here -->
+                </a>
+            </div>
+            <nav class="navbar d-none d-lg-flex"> <!-- Hide on small screens -->
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Faq.html">Faq</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="d-lg-none"> <!-- Show on small screens only -->
+                <button class="navbar-toggler" type="button" id="sidebarToggle" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="bi bi-three-dots-vertical"></i> <!-- Three-dot icon -->
+                </button>
+            </div>
+            <button class="navbar-toggler d-none d-lg-block" type="button" id="sidebarToggle" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-three-dots-vertical"></i> <!-- Three-dot icon -->
+            </button>
+        </div>
+    </header>
+
+    <div id="sidebar" class="sidebar">
+        <button class="close-btn" id="closeSidebar">
+            <i class="bi bi-x"></i> <!-- Close icon -->
+        </button>
+        <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link" href="Faq.html">Faq</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+    <section class="about-hero">
+        <div class="container text-center">
+            <div class="circle"></div>
+            <h1 class="mt-4 fw-bold">Contact Me</h1> <!-- Increased font size and made it bold -->
+            <p>Let’s connect and collaborate on something awesome!</p>
+            <p class="breadcrumb-text">
+                <a href="index.html" class="text-orange">Home</a> &gt; 
+                <span class="text-orange">Contact</span> <!-- Breadcrumb with link -->
+            </p>
+        </div>
+    </section>
+<!-- Google Map Embed -->
+<section class="map-section">
+    <h2 class="map-title">Our Location</h2>
+    <div class="map-container">
+        <div class="loading-overlay" id="loadingOverlay">Map Loading, please wait...</div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3939.756222664127!2d7.49508!3d9.057851!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0a728f9f02a3%3A0xe9de01451bd0d929!2sAbuja%2C%20Nigeria!5e0!3m2!1sen!2sng!4v1697130212342!5m2!1sen!2sng" 
+        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" onload="hideLoadingOverlay()"></iframe>
+    </div>
+</section>
+
+
+<!-- Contact Form and Details Section -->
+<section class="contact-info-section">
+    <h2 class="contact-title">Get in Touch With Us</h2>
+    <p class="contact-intro">We value your feedback and inquiries. Please fill out the form below or reach us through the contact details provided.</p>
+    
+    <div class="contact-info-form">
+        <!-- Left Side: Get in Touch Text & Form -->
+        <div class="contact-left">
+            <h3>Contact Us</h3>
+            <form id="contactForm" class="contact-form" action="#" method="POST" onsubmit="sendMail(event)">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <input type="text" id="subject" placeholder="Subject" required>
+                <textarea id="message" placeholder="Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+<!-- Modal for Messages -->
+<div id="messageModal" class="modal fade" tabindex="-1" aria-labelledby="messageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content rounded-4 shadow">
+            <div class="modal-header border-0">
+                <h5 class="modal-title" id="messageModalLabel">Message Status</h5>
+                <!-- Removed close button -->
+            </div>
+            <div class="modal-body text-center">
+                <p id="modalMessage" class="fs-5">Your message was sent successfully!</p>
+            </div>
+            <div class="modal-footer border-0">
+                <!-- Removed close button from the footer as well -->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        <!-- Right Side: Address, Phone, Email with Icons -->
+        <div class="contact-right">
+            <h3>Contact Information</h3>
+            <p><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> Abuja, Nigeria</p>
+            <p><i class="fas fa-phone-alt"></i> <strong>Phone:</strong> +234 123 456 7890</p>
+            <p><i class="fas fa-envelope"></i> <strong>Email:</strong> uwaisexample@gmail.com</p>
+            <p><i class="fas fa-clock"></i> <strong>Business Hours:</strong> Mon-Fri, 9 AM - 5 PM</p>
+        </div>
+    </div>
+</section>
+
+
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="Logo/logo.png.webp" alt="Your Logo" class="footer-logo-img">
+            </div>
+            <div class="footer-contact">
+                <p class="footer-email">haliluwais67@gmail.com</p>
+                <p class="footer-address">Abuja, Nigeria, Mararaba, Angwan Albarka.</p>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2024 All rights reserved | Uwais Halil</p>
+                <div class="footer-social">
+                    <span>Stay Connected</span>
+                    <a href="#" aria-label="Facebook" class="social-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" aria-label="Twitter" class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" aria-label="LinkedIn" class="social-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+            <a href="#top" class="back-to-top" aria-label="Back to top">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="chevron-icon">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 15l-3-3-3 3m6-6l-3-3-3 3" />
+                </svg>
+            </a>
+        </div>
+    </footer>
+    
+
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        
+        </script>
+        
+</body>
+</html>
